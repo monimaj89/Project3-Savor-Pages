@@ -1,5 +1,5 @@
 from flask import render_template
-from savorpages import add, db
+from savorpages import app, db
 
 
 @app.route("/")
