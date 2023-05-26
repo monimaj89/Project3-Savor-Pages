@@ -1,6 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+body {
+    font-family: 'Sora', sans-serif;
+}
+
+/* Logo */
+
 .logo-fork {
     height: 80px;
     width: 80px;
     margin-left: 10px;
 }
 
+/* Navbar */
+
+.my-nav{
+    height: 80px;
+}
+
+nav ul a {
+    color: #000;
+    transition: ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;;
+}
+
+.menu {
+    line-height: 80px;
+    color: #000;
+}
+
+.my-btn {
+    height: 70px;
+    color: #000;
+}
+
+.sidenav {
+    width: 200px;
+}
+
+.my-collaps {
+    /* border: 5px solid yellow !important; */
+    box-shadow: 2px 10px 10px yellow;
+}
