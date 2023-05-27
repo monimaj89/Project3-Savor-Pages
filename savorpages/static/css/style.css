@@ -80,3 +80,26 @@ main {
 .hero-text {
     font-family: 'Rock Salt', sans serif;
 }
+
+.hero-card {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.action-btn {
+    position: relative;
+    padding: 10px!important;
+    bottom: 0;
+    margin: 5px;
+}
+
+.hero-btn {
+    margin: 5px;
+    background-color: transparent;
+    border: 2px solid yellow;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    background-color: transparent;
+}
+
