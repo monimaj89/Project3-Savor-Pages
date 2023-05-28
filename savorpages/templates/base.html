@@ -17,7 +17,7 @@
         <!--  dropdown menu -->
         <div class="navbar-fixed">
             <ul id="dropdown1" class="dropdown-content">
-                <li><a class="black-text" href="#!">Register</a></li>
+                <li><a class="black-text" href="{{ url_for('register') }}">Register</a></li>
                 <li class="divider"></li>
                 <li><a class="black-text" href="#!">Login</a></li>
             </ul>
@@ -52,11 +52,11 @@
             <li>
                 <ul class="collapsible collapsible-accordion my-collaps">
                     <li>
-                        <a class="collapsible-header my-collaps"><i class="fa-solid fa-caret-down fa-xs"></i>
+                        <a class="collapsible-header my-collaps text-shadow"><i class="fa-solid fa-caret-down fa-xs"></i>
                             Account</a>
                         <div class="collapsible-body">
                             <ul id="" class="">
-                                <li><a href="#!">Register</a></li>
+                                <li><a href="{{ url_for('register') }}">Register</a></li>
                                 <li class="divider"></li>
                                 <li><a href="#!">Login</a></li>
                             </ul>
