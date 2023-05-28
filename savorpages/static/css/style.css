@@ -97,6 +97,7 @@ main {
     background-color: transparent;
     border: 2px solid yellow;
     border-radius: 6px;
+    height: 42px;
 }
 
 .btn:hover {
