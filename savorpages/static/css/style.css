@@ -5,7 +5,16 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #fff;
     
+}
+
+.btn {
+    font-family: 'Sora', sans serif;
+}
+
+.rock-font {
+    font-family: 'Rock Salt', sans serif;
 }
 
 .text-shadow {
@@ -41,7 +50,7 @@ nav ul a {
     color: #000;
 }
 
-.my-btn {
+.nav-btn {
     height: 70px;
     color: #000;
 }
@@ -81,9 +90,6 @@ main {
     background-size: cover;
 }
 
-.hero-text {
-    font-family: 'Rock Salt', sans serif;
-}
 
 .hero-card {
     background-color: rgba(0,0,0,0.5);
@@ -96,15 +102,34 @@ main {
     margin: 5px;
 }
 
-.hero-btn {
+.my-btn {
     margin: 5px;
-    background-color: transparent;
+    background-color: transparent!important;
     border: 2px solid yellow;
     border-radius: 6px;
     height: 42px;
 }
 
+
 .btn:hover {
     background-color: transparent!important;
 }
 
+
+/* Register */
+
+.wrapper {
+    border: 2px solid yellow;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1.4rem #bcbfc2, 1rem 1rem 1.4rem #fff;
+    margin-top: 5rem;
+    
+}
+
+.bg-dark {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.form {
+    padding-bottom: 1rem!important;
+}
