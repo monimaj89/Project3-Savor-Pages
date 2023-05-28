@@ -90,6 +90,7 @@ main {
     padding: 10px!important;
     bottom: 0;
     margin: 5px;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
 
 .hero-btn {
@@ -98,9 +99,10 @@ main {
     border: 2px solid yellow;
     border-radius: 6px;
     height: 42px;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
 
 .btn:hover {
-    background-color: transparent;
+    background-color: transparent!important;
 }
 
