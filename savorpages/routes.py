@@ -1,4 +1,4 @@
-from flask import flash, render_template, request, redirect, session, url_for
+from flask import flash, render_template, redirect, request, session, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 from savorpages import app, db
 from savorpages.models import Category, Users
@@ -18,8 +18,9 @@ def recipes():
 def register():
     if request.method == "POST":
         # check if username already exists in db
-        existing_user = Users.query.filter(
-            Users.user_name == request.form.get("username").lower()).all()
+        existing_user = Users.query.filter(Users.user_name ==
+                                           request.form.get
+                                           ("username").lower()).all()
 
         if existing_user:
             flash("Username already exists")
@@ -35,7 +36,12 @@ def register():
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
-        flash("Congratulation! You are a member now!")
+        flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    return render_template("login.html")
