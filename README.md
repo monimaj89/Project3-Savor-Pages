@@ -2,7 +2,7 @@
 
 ## Welcome
 
-Live Page link
+[View the live site](https://savor-pages.herokuapp.com/)
 
 Mockup image
 
