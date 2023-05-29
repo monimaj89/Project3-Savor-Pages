@@ -18,9 +18,8 @@ def recipes():
 def register():
     if request.method == "POST":
         # check if username already exists in db
-        existing_user = Users.query.filter(Users.user_name ==
-                                           request.form.get
-                                           ("username").lower()).all()
+        existing_user = Users.query.filter(
+            Users.user_name == request.form.get("username").lower()).all()
 
         if existing_user:
             flash("Username already exists")
@@ -37,7 +36,6 @@ def register():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
 

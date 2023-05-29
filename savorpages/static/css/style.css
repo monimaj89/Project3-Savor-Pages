@@ -18,7 +18,11 @@ body {
 }
 
 .text-shadow {
-    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+}
+
+.radius {
+    border-radius: 10px;
 }
 
 /* Remove margin above footer */
@@ -120,7 +124,6 @@ main {
 
 .wrapper {
     border: 2px solid yellow;
-    border-radius: 5px;
     box-shadow: 1rem 1rem 1.4rem #bcbfc2, 1rem 1rem 1.4rem #fff;
     margin-top: 5rem;
     

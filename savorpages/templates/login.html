@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container wrapper bg-dark">
+<div class="container wrapper bg-dark radius">
     <h3 class="yellow-text yellow-darken-4 center-align rock-font">LogIn</h3>
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
-            <div class="card-panel">
+            <div class="card-panel grey lighten-3 radius">
                 <!-- Username -->
                 <div class="row">
                     <div class="input-field col s12">
@@ -21,16 +21,17 @@
                         <label for="password">Password</label>
                     </div>
                 </div>
+                <!--  Login button -->
+                <div class="row form">
+                    <button type="submit"
+                        class="col s6 offset-s3 col m4 offset-m4 waves-effect waves-yellow black-text btn my-btn text-shadow">LogIn
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </button>
+                </div>
             </div>
         </form>
     </div>
-    <!--  Login button -->
-    <div class="row form">
-        <button type="submit"
-            class="col s6 offset-s3 col m4 offset-m4 waves-effect waves-yellow btn my-btn text-shadow">LogIn
-            <i class="fa-solid fa-arrow-right-to-bracket"></i>
-        </button>
-    </div>
+
 </div>
 
 <div class="row">
