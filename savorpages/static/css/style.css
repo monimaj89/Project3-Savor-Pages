@@ -125,7 +125,7 @@ main {
 .wrapper {
     border: 2px solid yellow;
     box-shadow: 1rem 1rem 1.4rem #bcbfc2, 1rem 1rem 1.4rem #fff;
-    margin-top: 5rem;
+    margin-top: 3rem;
     
 }
 
@@ -135,4 +135,10 @@ main {
 
 .form {
     padding-bottom: 1rem!important;
+}
+
+/*  Flash message */
+
+.flashes h5 {
+margin-top: 2.5rem;
 }
