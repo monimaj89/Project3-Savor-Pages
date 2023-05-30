@@ -31,7 +31,7 @@
                     <ul class="right hide-on-med-and-down black-text">
                         <li><a href="{{ url_for('home') }}">Home</a></li>
                         <li><a href="{{ url_for('recipes') }}">Recipies</a></li>
-                        <li><a href="#">Profile</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="#">Add Recipe</a></li>
                         <li><a href="#">Manage Category</a></li>
                         <li><a href="#">Log out</a></li>
@@ -47,7 +47,7 @@
                 class="brand-logo logo-fork"></li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('recipes') }}">Recipies</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="#">Add Recipe</a></li>
             <li><a href="#">Manage Category</a></li>
             <li><a href="#">Log out</a></li>
