@@ -77,13 +77,13 @@
     <section>
         <!--  flash message -->
         {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for message in messages %}
-        <div class="row flashes">
-            <h5 class="blacl-text center-align">{{ message }}</h5>
-        </div>
-        {% endfor %}
-        {% endif %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h5 class="blacl-text center-align">{{ message }}</h5>
+                    </div>
+                 {% endfor %}
+            {% endif %}
         {% endwith %}
     </section>
     <main>
