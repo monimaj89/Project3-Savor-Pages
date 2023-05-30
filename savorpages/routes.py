@@ -68,10 +68,20 @@ def login():
     return render_template("login.html")
 
 
+# Display profile page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # Check if user in session, and redorect to profile page
     if "user" in session:
         return render_template("profile.html", username=session["user"])
 
+    return redirect(url_for("login"))
+
+
+#  Log out
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
     return redirect(url_for("login"))
