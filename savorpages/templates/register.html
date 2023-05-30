@@ -10,16 +10,18 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix black-text"></i>
-                        <input id="username" name="username" type="text" class="validate">
+                        <input id="username" name="username" type="text" pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
                         <label for="username"> Userame</label>
+                        <small>Username must be between 5 and 15 characters long (letters and numbers)</small>
                     </div>
                 </div>
                 <!--  Password -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fa-solid fa-lock-open prefix black-text"></i>
-                        <input id="password" name="password" type="password" class="validate">
+                        <input id="password" name="password" type="password" minlength="7" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="password">Password</label>
+                        <small>Password must be between 7 and 15 characters long (letters and numbers)</small>
                     </div>
                 </div>
                 <!--  Register button -->
