@@ -50,7 +50,7 @@ def login():
             if check_password_hash(
                     existing_user[0].password, request.form.get("password")):
                         session["user"] = request.form.get("username").lower()
-                        flash("Welcome, {}".format(
+                        flash("Hello again, {}".format(
                             request.form.get("username")))
             else:
                 # invalid password match

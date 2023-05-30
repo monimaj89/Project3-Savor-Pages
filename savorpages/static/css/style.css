@@ -137,13 +137,13 @@ main {
     padding-bottom: 1rem!important;
 }
 
-a {
+.underline {
     color: yellow;
     position: relative;
     text-decoration: none;
 }
   
-  a::before {
+.underline::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -158,10 +158,11 @@ a {
     box-shadow: 0.5rem 0.5rem 0.7rem #bcbfc2, 0.5rem 0.5rem 0.7rem #fff;
 }
   
-  a:hover::before {
+.underline:hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }
+
 
 /*  Flash message */
 
