@@ -114,6 +114,23 @@ main {
     height: 42px;
 }
 
+.edit-btn{
+    margin: 5px;
+    background-color: transparent!important;
+    border: 2px solid green;
+    border-radius: 6px;
+    height: 42px;
+}
+
+
+.delete-btn{
+    margin: 5px;
+    background-color: transparent!important;
+    border: 2px solid red;
+    border-radius: 6px;
+    height: 42px;
+}
+
 
 .btn:hover {
     background-color: transparent!important;
