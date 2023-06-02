@@ -17,9 +17,22 @@
                     <h5 class="card-title">{{ category.category_name }}</h5>
                 </div>
                 <div class="card-action">
-                    <a href="{{ url_for('edit_category', category_id=category.id) }}" class="waves-effect waves-green black-text btn edit-btn text-shadow">Edit</a>
-                    <a href="#" class="waves-effect waves-red black-text btn delete-btn text-shadow">Delete</a>
+                    <a href="{{ url_for('edit_category', category_id=category.id) }}"
+                        class="waves-effect waves-green black-text btn edit-btn text-shadow">Edit</a>
+                        <a class="waves-effect waves-green black-text btn delete-btn text-shadow modal-trigger" href="#modal-{{ category.id }}">Delete</a>
                 </div>
+            </div>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal-{{ category.id }}" class="modal wrapper" aria-hidden="true">
+            <div class="modal-content center-align grey lighten-1">
+                <h4 class="yellow-text yellow-darken-4 rock-font">Delete Category</h4>
+                <p>Are you sure you want to delete this category?</p>
+                <small>This will delete also all recipies associated with this category. This cannot be undone</small>
+            </div>
+            <div class="modal-footer grey lighten-1">
+                <a href="{{ url_for('delete_category', category_id=category.id) }}" class="waves-effect waves-red black-text btn delete-btn text-shadow">Delete</a>
+                <a href="{{ url_for('categories') }}" class="waves-effect waves-green black-text btn edit-btn text-shadow">No!</a>
             </div>
         </div>
         {% endfor %}

@@ -31,15 +31,20 @@
                     <ul class="right hide-on-med-and-down black-text">
                         <li><a href="{{ url_for('home') }}">Home</a></li>
                         <li><a href="{{ url_for('recipes') }}">Recipies</a></li>
+                        
                         {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="#">Add Recipe</a></li>
-                        <li><a href="{{ url_for('categories') }}">Manage Category</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        {% endif %}
+                        {% if session.user|lower == "admin"|lower %}
+                        <li><a href="{{ url_for('categories') }}">Category</a></li>
+                        {% endif %}
+                        {% if session.user %}
                         <li><a href="{{ url_for('logout') }}">Log out</a></li>
-                        {% else %}
+                        {% endif %}
                         <li><a class="dropdown-trigger btn nav-btn yellow z-depth-5" href="#!"
                                 data-target="dropdown1">Account <i class="fa-solid fa-caret-down fa-xs"></i></a></li>
-                        {% endif %}
+                        
                     </ul>
                 </div>
             </nav>
@@ -50,18 +55,21 @@
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('recipes') }}">Recipies</a></li>
             {% if session.user %}
-            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="#">Add Recipe</a></li>
-            <li><a href="{{ url_for('categories') }}">Manage Category</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+            {% endif %}
+            {% if session.user|lower == "admin"|lower %}
+            <li><a href="{{ url_for('categories') }}">Category</a></li>
+            {% endif %}
+            {% if session.user %}
             <li><a href="{{ url_for('logout') }}#">Log out</a></li>
-            {% else %}
+            {% endif %}
             <li>
                 <ul class="collapsible collapsible-accordion my-collaps">
                     <li>
                         <a class="collapsible-header my-collaps text-shadow"><i
                                 class="fa-solid fa-caret-down fa-xs"></i>
                             Account</a>
-                        {% endif %}
                         <div class="collapsible-body">
                             <ul id="" class="">
                                 <li><a href="{{ url_for('register') }}">Register</a></li>

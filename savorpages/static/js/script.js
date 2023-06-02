@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
     $(".dropdown-trigger").dropdown({hover: true});  
     $('.fixed-action-btn').floatingActionButton({direction: 'right'});
+    $('.modal').modal();
   });
 
 
