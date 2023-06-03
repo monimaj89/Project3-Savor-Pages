@@ -4,6 +4,7 @@ $(document).ready(function(){
     $('.dropdown-trigger').dropdown({hover: true});  
     $('.fixed-action-btn').floatingActionButton({direction: 'right'});
     $('.modal').modal();
+    $('select').formSelect();
   });
 
 
