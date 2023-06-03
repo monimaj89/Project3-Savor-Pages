@@ -1,7 +1,7 @@
 from flask import flash, render_template, redirect, request, session, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 from savorpages import app, db
-from savorpages.models import Category, Users
+from savorpages.models import Category, Users, Recipe
 
 
 @app.route("/")
@@ -11,7 +11,8 @@ def home():
 
 @app.route("/recipes")
 def recipes():
-    return render_template("recipes.html")
+    recipes = list(Recipe.query.order_by(Recipe.id).all())
+    return render_template("recipes.html", recipes=recipes)
 
 
 @app.route("/categories")

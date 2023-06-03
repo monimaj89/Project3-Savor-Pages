@@ -186,3 +186,13 @@ main {
 .flashes h5 {
 margin-top: 2.5rem;
 }
+
+/* Add Recipe form */
+
+.dropdown-content li>span {
+    color: #000;
+}
+
+.row-pad {
+    padding: 0 0.75rem;
+}
