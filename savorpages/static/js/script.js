@@ -2,7 +2,7 @@ $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.collapsible').collapsible();
     $('.dropdown-trigger').dropdown({hover: true});  
-    $('.fixed-action-btn').floatingActionButton({direction: 'right'});
+    $('.fixed-action-btn').floatingActionButton({direction: 'right', hoverEnabled: false});
     $('.modal').modal();
     $('select').formSelect();
   });
