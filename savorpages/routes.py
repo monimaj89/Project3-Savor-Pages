@@ -77,11 +77,12 @@ def edit_recipe(recipe_id):
         recipe.ingredients = request.form.get("ingredients"),
         recipe.preparation = request.form.get("preparation"),
         recipe.cook_time = request.form.get("cook_time"),
-        recipe.category_id = request.form.get("category_id")
+        recipe.category_id = request.form.get("category_id"),
+        recipe.created_by = session["user"]
         db.session.commit()
         return redirect(url_for("recipes"))
     return render_template("edit_recipe.html",
-                            recipe=recipe, categories=categories)
+                           recipe=recipe, categories=categories)
 
 
 @app.route("/delete_recipe/<int:recipe_id>")
