@@ -67,6 +67,23 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+@app.route("/edit_recipe/<int:recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = Recipe.query.get_or_404(recipe_id)
+    categories = list(Category.query.order_by(Category.category_name).all())
+    if request.method == "POST":
+        recipe.recipe_name = request.form.get("recipe_name"),
+        recipe.recipe_description = request.form.get("recipe_description"),
+        recipe.ingredients = request.form.get("ingredients"),
+        recipe.preparation = request.form.get("preparation"),
+        recipe.cook_time = request.form.get("cook_time"),
+        recipe.category_id = request.form.get("category_id")
+        db.session.commit()
+        return redirect(url_for("recipes"))
+    return render_template("edit_recipe.html",
+                            recipe=recipe, categories=categories)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
