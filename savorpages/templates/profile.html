@@ -1,12 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container wrapper bg-dark radius">
+<div class="container wrapper bg-dark radius text-shadow">
     <div class="row">
         <div class="col s12 m8 offset-m2">
-                <h3 class="center-align yellow-text yellow-darken-4 rock-font">
-                    {{ username }}'s Profile Page
-                </h3>
+            <h3 class="center-align yellow-text yellow-darken-4 rock-font">
+                {{ username }}'s Profile Page
+            </h3>
+            <h5 class="white-text"> Hello {{ username }}. On the user dashboard you will find all information you may
+                need to move around the page. Looked through recipes, add, edit or delete your own recipes. Have fun!
+            </h5>
+            <h4 class="center-align yellow-text yellow-darken-4 rock-font">As a member of Savor Pages cookbook, you will
+                be able to:</h4>
+            <h5 class="white-text">
+                <ol>
+                    <li>Add your recipes</li>
+                    <li>Edit and update your recipe</li>
+                    <li>Delete any recipe you posted. Please be warned that this action cannot be undone and once
+                        deleted,
+                        we will not be able to retrieve a record of the deleted recipe.</li>
+                    <li>Access and choose from the list of categories when uploading your recipe</li>
+                    <li>Edit which category to add with your own recipe. But you will not be able to delete any
+                        category.
+                        This action is only available to our admin users.</li>
+                </ol>
+            </h5>
         </div>
     </div>
 </div>

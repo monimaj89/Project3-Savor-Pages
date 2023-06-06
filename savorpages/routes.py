@@ -150,6 +150,8 @@ def login():
 # Display profile page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    user = Users.query.get_or_404(user_id)
+    recipes = user.recipes
     # Check if user in session, and redorect to profile page
     if "user" in session:
         return render_template("profile.html", username=session["user"])
