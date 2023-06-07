@@ -155,8 +155,7 @@ def login():
 def profile(username):
     # Check if user in session, and redorect to profile page
     if "user" in session:
-        recipe_list = Recipe.query.filter(Recipe.id ==
-                                          {"created_by": session['user']})
+        recipe_list = Recipe.query.filter_by(created_by=session["user"]).all()
         categories = list(Category.query.order_by(
                             Category.category_name).all())
         return render_template("profile.html", username=session["user"],
