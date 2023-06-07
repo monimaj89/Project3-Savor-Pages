@@ -59,6 +59,7 @@ def add_recipe():
             ingredients=request.form.get("ingredients"),
             preparation=request.form.get("preparation"),
             cook_time=request.form.get("cook_time"),
+            created_by=session["user"],
             category_id=request.form.get("category_id")
         )
         db.session.add(recipe)
@@ -77,8 +78,8 @@ def edit_recipe(recipe_id):
         recipe.ingredients = request.form.get("ingredients"),
         recipe.preparation = request.form.get("preparation"),
         recipe.cook_time = request.form.get("cook_time"),
-        recipe.category_id = request.form.get("category_id"),
-        recipe.created_by = session["user"]
+        recipe.created_by = session["user"],
+        recipe.category_id = request.form.get("category_id")
         db.session.commit()
         return redirect(url_for("recipes"))
     return render_template("edit_recipe.html",
@@ -150,8 +151,6 @@ def login():
 # Display profile page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    user = Users.query.get_or_404(user_id)
-    recipes = user.recipes
     # Check if user in session, and redorect to profile page
     if "user" in session:
         return render_template("profile.html", username=session["user"])
