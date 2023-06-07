@@ -15,6 +15,7 @@ def recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Manage categories
 @app.route("/categories")
 def categories():
     categories = list(Category.query.order_by(Category.category_name).all())
@@ -49,6 +50,7 @@ def delete_category(category_id):
     return redirect(url_for("categories"))
 
 
+# Manage recipes
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     categories = list(Category.query.order_by(Category.category_name).all())
@@ -153,7 +155,12 @@ def login():
 def profile(username):
     # Check if user in session, and redorect to profile page
     if "user" in session:
-        return render_template("profile.html", username=session["user"])
+        recipe_list = Recipe.query.filter(Recipe.id ==
+                                          {"created_by": session['user']})
+        categories = list(Category.query.order_by(
+                            Category.category_name).all())
+        return render_template("profile.html", username=session["user"],
+                               recipe_list=recipe_list, categories=categories)
 
     return redirect(url_for("login"))
 
