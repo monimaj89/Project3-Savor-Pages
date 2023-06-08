@@ -5,7 +5,7 @@
     <h3 class="yellow-text yellow-darken-4 center-align rock-font">Recipes</h3>
     <div class="row">
         {% for recipe in recipes %}
-        <div class="col s12 col m6">
+        <div class="col s12 col l6">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="static/images/pasta.jpg">
@@ -18,16 +18,16 @@
                     <h4 class="card-title grey-text text-darken-4">{{ recipe.recipe_name }}
                     <i class="fa-solid fa-xmark right"></i></h4>
                     <h6>Category</h6>
-                        <strong>{{ recipe.category }}</strong>
+                        <p>{{ recipe.category }}</p>
                     <h6>Posted by: {{ recipe.created_by }}</h6>
                     <h5>Description</h5>    
-                    <p>{{ recipe.recipe_description }}</p>
+                        <p>{{ recipe.recipe_description }}</p>
                     <h5>Ingredients</h5>
-                    <p>{{ recipe.ingredients }}</p>
+                        <p>{{ recipe.ingredients }}</p>
                     <h5>Preparation</h5>
-                    <p>{{ recipe.preparation }}</p>
+                        <p>{{ recipe.preparation }}</p>
                     <h5>Cooking time</h5>
-                    <p>{{ recipe.cook_time }} mins</p>
+                        <p>{{ recipe.cook_time }} mins</p>
                     <div class="card-action">
                         {% if session.user|lower == recipe.created_by|lower or session.user|lower == 'admin' %}
                             <a href="{{ url_for('edit_recipe', recipe_id=recipe.id) }}"
