@@ -5,12 +5,6 @@ from savorpages import app, db
 from savorpages.models import Category, Users, Recipe
 
 
-# retrieves the hidden env variable for cloudinary API
-Cloud.config(cloud_name=os.getenv('CLOUD_NAME'),
-             api_key=os.getenv('API_KEY'),
-             api_secret=os.getenv('API_SECRET'))
-
-
 @app.route("/")
 def home():
     return render_template("index.html")
