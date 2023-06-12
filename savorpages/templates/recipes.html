@@ -3,6 +3,11 @@
 
 <div class="container wrapper bg-dark radius">
     <h3 class="yellow-text yellow-darken-4 center-align rock-font">Recipes</h3>
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_recipe') }}"
+            class="waves-effect waves-yellow black-text btn my-btn text-shadow">Add
+            Recipe <i class="fa-solid fa-plus"></i></a>
+    </div>
     <div class="row">
         <!-- Displays all alvailable recipes -->
         {% for recipe in recipes %}
