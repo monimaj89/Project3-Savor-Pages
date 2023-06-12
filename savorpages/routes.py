@@ -19,12 +19,20 @@ def recipes():
 # Manage categories
 @app.route("/categories")
 def categories():
+    # Allows to manage categories only for admin user
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to manage categories!")
+        return redirect(url_for("login"))
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("categories.html", categories=categories)
 
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    # Allows to manage categories only for admin user
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to manage categories!")
+        return redirect(url_for("home"))
     if request.method == "POST":
         category = Category(category_name=request.form.get("category_name"))
         db.session.add(category)
@@ -35,6 +43,10 @@ def add_category():
 
 @app.route("/edit_category/<int:category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    # Allows to manage categories only for admin user
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to manage categories!")
+        return redirect(url_for("home"))
     category = Category.query.get_or_404(category_id)
     if request.method == "POST":
         category.category_name = request.form.get("category_name")
@@ -45,6 +57,10 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<int:category_id>")
 def delete_category(category_id):
+    # Allows to manage categories only for admin user
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to manage categories!")
+        return redirect(url_for("home"))
     category = Category.query.get_or_404(category_id)
     db.session.delete(category)
     db.session.commit()
@@ -54,6 +70,9 @@ def delete_category(category_id):
 # Manage recipes
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if "user" not in session:
+        flash("You need to be logged in to add a recipe")
+        return redirect(url_for("login"))
     categories = list(Category.query.order_by(Category.category_name).all())
     if request.method == "POST":
         recipe = Recipe(
@@ -75,13 +94,16 @@ def add_recipe():
 def edit_recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
     categories = list(Category.query.order_by(Category.category_name).all())
+    # Allows to edit only user's own recipe
+    if "user" not in session or session["user"] != recipe.created_by:
+        flash("You can edit only your own recipes!")
+        return redirect(url_for("recipes"))
     if request.method == "POST":
         recipe.recipe_name = request.form.get("recipe_name"),
         recipe.recipe_description = request.form.get("recipe_description"),
         recipe.ingredients = request.form.get("ingredients"),
         recipe.preparation = request.form.get("preparation"),
         recipe.cook_time = request.form.get("cook_time"),
-        recipe.created_by = session["user"],
         recipe.category_id = request.form.get("category_id")
         db.session.commit()
         return redirect(url_for("recipes"))
@@ -92,11 +114,16 @@ def edit_recipe(recipe_id):
 @app.route("/delete_recipe/<int:recipe_id>")
 def delete_recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
+    # Allows to delete only user's own recipe
+    if "user" not in session or session["user"] != recipe.created_by:
+        flash("You can edit only your own recipes and must be logged in!")
+        return redirect(url_for("recipes"))
     db.session.delete(recipe)
     db.session.commit()
     return redirect(url_for("recipes"))
 
 
+# Register functionality
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -124,6 +151,7 @@ def register():
     return render_template("register.html")
 
 
+# Login functionality
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":

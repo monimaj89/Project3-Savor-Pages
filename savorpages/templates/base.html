@@ -30,7 +30,7 @@
                             class="fa-solid fa-ellipsis"></i></a>
                     <ul class="right hide-on-med-and-down black-text">
                         <li><a href="{{ url_for('home') }}">Home</a></li>
-                        <li><a href="{{ url_for('recipes') }}">Recipies</a></li>
+                        <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
                         
                         {% if session.user %}
                         <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
