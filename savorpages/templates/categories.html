@@ -3,12 +3,14 @@
 <div class="container wrapper bg-dark radius">
     <h3 class="yellow-text yellow-darken-4 center-align rock-font">Categories</h3>
     <div class="row form">
+        <!-- Add category button -->
         <div class="col s12 center-align">
             <a href="{{ url_for('add_category') }}"
                 class="waves-effect waves-yellow black-text btn my-btn text-shadow">Add
                 Category <i class="fa-solid fa-plus"></i></a>
         </div>
     </div>
+    <!-- Available categories -->
     <div class="row">
         {% for category in categories %}
         <div class="col s12 m6 l3">

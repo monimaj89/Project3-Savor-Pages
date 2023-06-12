@@ -14,7 +14,7 @@
 <body>
 
     <header>
-        <!--  dropdown menu -->
+        <!--  Dropdown menu -->
         <div class="navbar-fixed">
             <ul id="dropdown1" class="dropdown-content">
                 <li><a class="black-text" href="{{ url_for('register') }}">Register</a></li>
@@ -47,7 +47,7 @@
                 </div>
             </nav>
         </div>
-        <!-- mobile navbar -->
+        <!-- Mobile navbar -->
         <ul class="sidenav" id="mobile-demo">
             <li><img src="{{ url_for('static', filename='images/logo.webp') }}" class="brand-logo logo-fork"></li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -80,12 +80,12 @@
         </ul>
     </header>
     <section>
-        <!--  flash message -->
+        <!--  Flash message -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
                     <div class="row flashes">
-                        <h5 class="blacl-text center-align">{{ message }}</h5>
+                        <h5 class="black-text center-align">{{ message }}</h5>
                     </div>
                  {% endfor %}
             {% endif %}
@@ -95,7 +95,7 @@
         {% block content %}
         {% endblock %}
     </main>
-
+    <!-- Footer -->
     <footer class="page-footer white my-footer">
         <div class="footer-copyright white black-text">
             <div class="container center-align">

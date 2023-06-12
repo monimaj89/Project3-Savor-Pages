@@ -1,24 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!-- Hero image -->
 <div class="row">
     <div class="col s12 hero valign-wrapper">
+        <!-- Overlay card with text and buttons -->
         <div class="col s12 card hero-card z-depth-5">
             <h4 class="yellow-text rock-font">Savor Pages</h4>
-            <h5 class="white-text">This is the perfect place where you can add your favorite
+            <h5 class="white-text">Are you a food lover? This is the perfect place where you can add your favorite
                 recipes and share them with others!</h5>
                 <h6 class="white-text">Click below to search through recipies or register/login to your account</h6>    
             <div class="row valign-wrapper">
+                <!-- Recipe page button -->
                 <div class="col s12 m4 l2">
                     <a href="{{ url_for('recipes') }}" class="btn waves-effect waves-yellow my-btn text-shadow">Find a Recipe</a>
                 </div>
+                <!-- Action buttons for register and login -->
                 <div class="col s12">
                     <div class="fixed-action-btn action-btn text-shadow">
                         <a class="btn-floating btn-large yellow lighten-1">
                             <i class="fa-regular fa-address-card" style="color: #000000;"></i>
                         </a>
                         <ul>
-                            <li><a href="{{ url_for('login') }}" class="btn-floating red"><i class="fa-solid fa-user"></i></a></li>
+                            <li><a href="{{ url_for('login') }}" class="btn-floating blue"><i class="fa-solid fa-user"></i></a></li>
                             <li><a href="{{ url_for('register') }}" class="btn-floating green"><i class="fa-solid fa-user-plus"></i></a></li>
                         </ul>
                     </div>

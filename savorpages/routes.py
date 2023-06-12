@@ -7,16 +7,19 @@ from savorpages.models import Category, Users, Recipe
 
 @app.route("/")
 def home():
+    # Renders home page
     return render_template("index.html")
 
 
 @app.route("/recipes")
 def recipes():
+    #  Renders recipe page
     recipes = list(Recipe.query.order_by(Recipe.id).all())
     return render_template("recipes.html", recipes=recipes)
 
 
-# Manage categories
+# Manage categories from Code Institute walkthrough
+# project's source code amended for my requirements
 @app.route("/categories")
 def categories():
     # Allows to manage categories only for admin user
@@ -67,9 +70,11 @@ def delete_category(category_id):
     return redirect(url_for("categories"))
 
 
-# Manage recipes
+# Manage recipes from Code Institute walkthrough
+# project's source code amended for my requirements
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    # Allows only logged user to add a recipe
     if "user" not in session:
         flash("You need to be logged in to add a recipe")
         return redirect(url_for("login"))
@@ -92,12 +97,12 @@ def add_recipe():
 
 @app.route("/edit_recipe/<int:recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
-    recipe = Recipe.query.get_or_404(recipe_id)
-    categories = list(Category.query.order_by(Category.category_name).all())
     # Allows to edit only user's own recipe
     if "user" not in session or session["user"] != recipe.created_by:
         flash("You can edit only your own recipes!")
         return redirect(url_for("recipes"))
+    recipe = Recipe.query.get_or_404(recipe_id)
+    categories = list(Category.query.order_by(Category.category_name).all())
     if request.method == "POST":
         recipe.recipe_name = request.form.get("recipe_name"),
         recipe.recipe_description = request.form.get("recipe_description"),
@@ -113,17 +118,19 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<int:recipe_id>")
 def delete_recipe(recipe_id):
-    recipe = Recipe.query.get_or_404(recipe_id)
     # Allows to delete only user's own recipe
     if "user" not in session or session["user"] != recipe.created_by:
         flash("You can edit only your own recipes and must be logged in!")
         return redirect(url_for("recipes"))
+    recipe = Recipe.query.get_or_404(recipe_id)
     db.session.delete(recipe)
     db.session.commit()
     return redirect(url_for("recipes"))
 
 
-# Register functionality
+# Register, login, log out and profile functionality from
+# Code Institute combined database source code
+# amended to my requirements
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
