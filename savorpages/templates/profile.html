@@ -82,7 +82,7 @@
             <div class="modal-footer grey lighten-1">
                 <a href="{{ url_for('delete_recipe', recipe_id=recipe.id) }}"
                     class="waves-effect waves-red black-text btn delete-btn text-shadow">Delete</a>
-                <a href="{{ url_for('recipes') }}"
+                <a href="{{ url_for('profile', username=session['user']) }}"
                     class="waves-effect waves-green black-text btn edit-btn text-shadow">No!</a>
             </div>
         </div>
