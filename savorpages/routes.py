@@ -97,12 +97,12 @@ def add_recipe():
 
 @app.route("/edit_recipe/<int:recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    recipe = Recipe.query.get_or_404(recipe_id)
+    categories = list(Category.query.order_by(Category.category_name).all())
     # Allows to edit only user's own recipe
     if "user" not in session or session["user"] != recipe.created_by:
         flash("You can edit only your own recipes!")
         return redirect(url_for("recipes"))
-    recipe = Recipe.query.get_or_404(recipe_id)
-    categories = list(Category.query.order_by(Category.category_name).all())
     if request.method == "POST":
         recipe.recipe_name = request.form.get("recipe_name"),
         recipe.recipe_description = request.form.get("recipe_description"),
@@ -111,6 +111,7 @@ def edit_recipe(recipe_id):
         recipe.cook_time = request.form.get("cook_time"),
         recipe.category_id = request.form.get("category_id")
         db.session.commit()
+        flash("Recipe successfully updated!")
         return redirect(url_for("recipes"))
     return render_template("edit_recipe.html",
                            recipe=recipe, categories=categories)
@@ -118,11 +119,11 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<int:recipe_id>")
 def delete_recipe(recipe_id):
+    recipe = Recipe.query.get_or_404(recipe_id)
     # Allows to delete only user's own recipe
     if "user" not in session or session["user"] != recipe.created_by:
         flash("You can edit only your own recipes and must be logged in!")
         return redirect(url_for("recipes"))
-    recipe = Recipe.query.get_or_404(recipe_id)
     db.session.delete(recipe)
     db.session.commit()
     return redirect(url_for("recipes"))
