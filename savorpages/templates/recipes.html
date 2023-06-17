@@ -23,8 +23,11 @@
                 <div class="card-reveal">
                     <h4 class="card-title grey-text text-darken-4">{{ recipe.recipe_name }}
                     <i class="fa-solid fa-xmark right"></i></h4>
-                    <h6>Category</h6>
-                        <p>{{ recipe.category }}</p>
+                    {% for category in categories %}
+                        {% if category.id == recipe.category_id |int %}
+                            <p>{{ category.category_name }}</p>
+                        {% endif %}
+                    {% endfor %}
                     <h6>Posted by: {{ recipe.created_by }}</h6>
                     <h5>Description</h5>    
                         <p>{{ recipe.recipe_description }}</p>

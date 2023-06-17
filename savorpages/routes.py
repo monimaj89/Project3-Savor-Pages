@@ -15,7 +15,10 @@ def home():
 def recipes():
     #  Renders recipe page
     recipes = list(Recipe.query.order_by(Recipe.id).all())
-    return render_template("recipes.html", recipes=recipes)
+    categories = list(Category.query.order_by(
+                            Category.category_name).all())
+    return render_template("recipes.html", recipes=recipes,
+                           categories=categories)
 
 
 # Manage categories from Code Institute walkthrough
