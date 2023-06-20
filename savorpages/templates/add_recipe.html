@@ -4,7 +4,7 @@
     <h3 class="yellow-text yellow-darken-4 center-align rock-font">Add Recipe</h3>
     <div class="row row-pad">
         <div class="col s12 l8 offset-l2 card-panel grey lighten-3 radius">
-            <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+            <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}" enctype="multipart/form-data">
                 <!-- Select category -->
                 <div class="row">
                     <div class="input-field col s12">
@@ -17,7 +17,7 @@
                         </select>
                     </div>
                 </div>
-                <!-- Recipe name -->
+         <!-- Recipe name -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fa-solid fa-pencil prefix"></i>
@@ -26,7 +26,7 @@
                         <label for="recipe_name">Recipe Name</label>
                     </div>
                 </div>
-                <!-- Recipe description -->
+         <!-- Recipe description -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fa-solid fa-align-left prefix"></i>
@@ -35,7 +35,7 @@
                         <label for="recipe_description">Description</label>
                     </div>
                 </div>
-                <!-- Ingredients -->
+        <!-- Ingredients -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fa-solid fa-apple-whole prefix"></i>
@@ -43,7 +43,7 @@
                         <label for="ingredients">Ingredients</label>
                     </div>
                 </div>
-                <!-- Preparation -->
+        <!-- Preparation -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fa-solid fa-book-open prefix"></i>
@@ -51,7 +51,7 @@
                         <label for="preparation">Preparation</label>
                     </div>
                 </div>
-                <!-- Cook time -->
+        <!-- Cook time -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fa-solid fa-clock prefix"></i>
@@ -59,9 +59,10 @@
                         <label for="cook_time">Cook Time (in minutes)</label>
                     </div>
                 </div>
-                <!-- Image -->
-
-                <!-- Submit button -->
+        <!-- Image -->
+                <label for="image_url">Image</label>
+                <input type="file" id="image_url" name="image_url">
+        <!-- Submit button -->
                 <div class="row form">
                     <button type="submit"
                         class="col s6 offset-s3 col m4 offset-m4 waves-effect waves-yellow black-text btn my-btn text-shadow">Add

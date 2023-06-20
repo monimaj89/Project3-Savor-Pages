@@ -13,13 +13,16 @@
         {% for recipe in recipes %}
         <div class="col s12 col l6">
             <div class="card">
+                <!-- Image -->
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="static/images/pasta.jpg">
+                    <img class="activator" src="{{ recipe.image_url }}">
                 </div>
+                <!-- Recipe Title -->
                 <div class="card-content">
                     <h4 class="card-title activator grey-text text-darken-4">{{ recipe.recipe_name }} <i
                             class="fa-solid fa-ellipsis right"></i></h4>
                 </div>
+                <!-- Recipe content -->
                 <div class="card-reveal">
                     <h4 class="card-title grey-text text-darken-4">{{ recipe.recipe_name }}
                     <i class="fa-solid fa-xmark right"></i></h4>

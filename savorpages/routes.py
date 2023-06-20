@@ -1,8 +1,18 @@
+import os
 from flask import flash, render_template, redirect, request, session, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
-import cloudinary as Cloud
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from savorpages import app, db
 from savorpages.models import Category, Users, Recipe
+
+
+cloudinary.config.update = ({
+    'cloud_name': os.environ.get('cloud_name'),
+    'api_key': os.environ.get('api_key'),
+    'api_secret': os.environ.get('api_secret')
+})
 
 
 @app.route("/")
@@ -82,13 +92,17 @@ def add_recipe():
         flash("You need to be logged in to add a recipe")
         return redirect(url_for("login"))
     categories = list(Category.query.order_by(Category.category_name).all())
+
     if request.method == "POST":
+        image = request.files["image_url"]
+        image_upload = cloudinary.uploader.upload(image)
         recipe = Recipe(
             recipe_name=request.form.get("recipe_name"),
             recipe_description=request.form.get("recipe_description"),
             ingredients=request.form.get("ingredients"),
             preparation=request.form.get("preparation"),
             cook_time=request.form.get("cook_time"),
+            image_url=request.files["image_url"],
             created_by=session["user"],
             category_id=request.form.get("category_id")
         )

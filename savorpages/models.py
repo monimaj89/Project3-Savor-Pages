@@ -33,6 +33,7 @@ class Recipe(db.Model):
     ingredients = db.Column(db.Text, nullable=False)
     preparation = db.Column(db.Text, nullable=False)
     cook_time = db.Column(db.Integer, nullable=False)
+    image_url = db.Column(db.Text, unique=True, nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey("category.id",
                             ondelete="CASCADE"), nullable=False)
 
