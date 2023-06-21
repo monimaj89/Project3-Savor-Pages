@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container wrapper bg-dark radius text-shadow">
+<div class="container wrapper bg-dark radius">
     <!-- User's dashboard -->
     <div class="row">
-        <div class="col s12 l8 offset-l2">
+        <div class="col s12 l8 offset-l2 text-shadow">
             <h3 class="center-align yellow-text yellow-darken-4 rock-font">
                 {{ username }}'s Profile Page
             </h3>
@@ -31,7 +31,7 @@
     <!-- Display user's recipes -->
     {% if recipe_list %}
     <div>
-        <h4 class="center-align yellow-text yellow-darken-4 rock-font">Your recipes</h4>
+        <h4 class="center-align yellow-text yellow-darken-4 rock-font text-shadow">Your recipes</h4>
     </div>
     <div class="row">
         {% for recipe in recipe_list %}

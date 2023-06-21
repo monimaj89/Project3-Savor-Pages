@@ -102,7 +102,7 @@ def add_recipe():
             ingredients=request.form.get("ingredients"),
             preparation=request.form.get("preparation"),
             cook_time=request.form.get("cook_time"),
-            image_url=request.files["image_url"],
+            image_url=image_upload["secure_url"],
             created_by=session["user"],
             category_id=request.form.get("category_id")
         )
