@@ -185,6 +185,10 @@ margin-top: 2.5rem;
     padding: 0 0.75rem;
 }
 
+.card-image img {
+    max-height: 35vh;
+}
+
 /* Edit button */
 
 .edit-btn{

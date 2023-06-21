@@ -12,11 +12,12 @@
                         <select name="category_id" id="category_id" class="validate">
                             <option value="" class="disabled selected black-text">Select category</option>
                             {% for category in categories %}
-                                {% if category.id == recipe.category_id | int %}
-                                    <option value="{{ category.id }}" class="black-text" selected>{{ category.category_name }}</option>
-                                {% else %}
-                                    <option value="{{ category.id }}">{{ category.category_name }}</option>
-                                {% endif %}
+                            {% if category.id == recipe.category_id | int %}
+                            <option value="{{ category.id }}" class="black-text" selected>{{ category.category_name }}
+                            </option>
+                            {% else %}
+                            <option value="{{ category.id }}">{{ category.category_name }}</option>
+                            {% endif %}
                             {% endfor %}
                         </select>
                     </div>
@@ -25,8 +26,8 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fa-solid fa-pencil prefix"></i>
-                        <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}"
-                            minlength="3" maxlength="30" type="text" class="validate" required>
+                        <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" minlength="3"
+                            maxlength="30" type="text" class="validate" required>
                         <label for="recipe_name">Recipe Name</label>
                     </div>
                 </div>
@@ -61,12 +62,11 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fa-solid fa-clock prefix"></i>
-                        <input id="cook_time" name="cook_time" type="number" value="{{ recipe.cook_time }}" class="validate" required>
+                        <input id="cook_time" name="cook_time" type="number" value="{{ recipe.cook_time }}"
+                            class="validate" required>
                         <label for="cook_time">Cook Time (in minutes)</label>
                     </div>
                 </div>
-                <!-- Image -->
-
                 <!-- Submit button -->
                 <div class="row form">
                     <button type="submit"
