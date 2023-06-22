@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="errorfit">
+    <h1>404</h1>
+    <img class="error" src="static/images/error.webp" alt="error">
+</div>
+<div class="errorfit">
+    <h5>OOPS! Page not found!</h5>
+    <a href="{{ url_for('home') }}" class="btn waves-effect waves-yellow my-btn black-text text-shadow">Take me back!</a>
+</div>
+
+{% endblock %}

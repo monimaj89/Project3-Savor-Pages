@@ -230,4 +230,26 @@ def logout():
 # Errors handler
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template("error.html")
+    '''
+    Route to handle 404 page not found error
+    Renders custom 404 page
+    '''
+    return render_template("error404.html")
+
+
+@app.errorhandler(400)
+def handle_bad_request(e):
+    '''
+    Route to handle 400 bad request error
+    Renders custom 400 page
+    '''
+    return render_template("error400.html")
+
+
+@app.errorhandler(500)
+def internal_error(error):
+    '''
+    Route to handle 500 internal server error
+    Renders custom 500 page
+    '''
+    return render_template("error500.html")
