@@ -210,3 +210,16 @@ margin-top: 2.5rem;
     height: 42px;
 }
 
+
+/* Error pages */
+.error {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+.errorfit {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}

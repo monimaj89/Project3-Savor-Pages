@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="errorfit">
+    <img class="error" src="static/images/error.webp" alt="error">
+</div>
+<div class="errorfit">
+    <a href="{{ url_for('home') }}" class="btn waves-effect waves-yellow my-btn black-text text-shadow">Take me back!</a>
+</div>
+
+{% endblock %}
