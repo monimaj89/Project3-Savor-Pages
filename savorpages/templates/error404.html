@@ -2,7 +2,7 @@
 {% block content %}
 <div class="errorfit">
     <h1>404</h1>
-    <img class="error" src="static/images/error.webp" alt="error">
+    <img class="error" src="{{ url_for('static', filename='images/error.webp') }}" alt="a women trapped inside donut - error">
 </div>
 <div class="errorfit">
     <h5>OOPS! Page not found!</h5>
