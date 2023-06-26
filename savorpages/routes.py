@@ -139,7 +139,7 @@ def delete_recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
     # Allows to delete only user's own recipe
     if "user" not in session or session["user"] != recipe.created_by:
-        flash("You can edit only your own recipes and must be logged in!")
+        flash("You can delete only your own recipes or must be logged in!")
         return redirect(url_for("recipes"))
     db.session.delete(recipe)
     db.session.commit()
