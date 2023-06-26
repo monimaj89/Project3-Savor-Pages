@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Monika Majchrowicz">
+    <meta name="description" content="Savor Pages is a recipe page for all food lovers, where they can share their own recipes">
+    <meta name="keywords" content="Recipe, food, cooking, bakieng, meals ideas">
+    <!-- Materialize stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
+    <!-- Custom stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Savor Pages</title>
 </head>
@@ -25,8 +30,8 @@
             <nav class="my-nav white">
                 <div class="nav-wrapper">
                     <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/logo.webp') }}"
-                            class="brand-logo logo-fork hide-on-med-and-down"></a>
-                    <a href="#" data-target="mobile-demo" class="sidenav-trigger menu"><i
+                            class="brand-logo logo-fork hide-on-med-and-down" alt="sausage with fork logo"></a>
+                    <a href="{{ url_for('home') }}" data-target="mobile-demo" class="sidenav-trigger menu" aria-label="Toggle navigation"><i
                             class="fa-solid fa-ellipsis"></i></a>
                     <ul class="right hide-on-med-and-down black-text">
                         <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -49,7 +54,7 @@
         </div>
         <!-- Mobile navbar -->
         <ul class="sidenav" id="mobile-demo">
-            <li><img src="{{ url_for('static', filename='images/logo.webp') }}" class="brand-logo logo-fork"></li>
+            <li><img src="{{ url_for('static', filename='images/logo.webp') }}" class="brand-logo logo-fork" alt="sausage with fork logo"></li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('recipes') }}">Recipies</a></li>
             {% if session.user %}
@@ -103,13 +108,13 @@
             </div>
         </div>
     </footer>
-
-
-
+<!-- Materialize jQuery  -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://kit.fontawesome.com/baba64def8.js" crossorigin="anonymous"></script>
+<!-- Base JS -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/baba64def8.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
