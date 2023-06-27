@@ -77,16 +77,53 @@ Based on the results of the Feature Ideas Planning, I have decided to attempt to
 * Fresh-looking, appetising and themed use of images across the site.
 * Full CRUD functionality.
 * Use of Defensive Programming to safeguard logged in users againts any unintended result of their actions.
-* Robust error handling provide information as well as a much better user experience for any user who may encounter errors when using the site.
+* Solid error handling provide information as well as a much better user experience for any user who may encounter errors when using the site.
 
 ## Structure Plan
-
+The yellow elements in these diagrams illustrate the pages that are always accessible from the navbar for all visitors.
+The grey elements in these diagrams are the pages not accessible to a particular user.
+The view recipes function is available to all visitors.
+The add, edit and delete elements are only available to logged in users. The delete functions will return to:
+ * A registered user deleting his own recipe will return to a recipe page.
+ * An admin deleting the category associated with the recipe will return to a category page.
+### Guest user
+![Guest user journey across the site](savorpages/docs/quest.png)
+### Registered User
+![Registered user's journey across the site](savorpages/docs/register.png)
+### Admin user
+![Admin user's permission and journey across the site](savorpages/docs/admin.png)
+## Skeleton
+### Wireframes
+* [DESKTOP - Index page](savorpages/docs/wireframes/dhome.png)
+* [DESKTOP - Recipe page](savorpages/docs/wireframes/dhome.png)
+* [DESKTOP - Category page](savorpages/docs/wireframes/dhome.png)
+* [DESKTOP - Add recipe page](savorpages/docs/wireframes/dhome.png)
+* [DESKTOP - Edit recipe page](savorpages/docs/wireframes/dhome.png)
+* [DESKTOP - Edit category page](savorpages/docs/wireframes/dhome.png)
+* [TABLET - Index page](savorpages/docs/wireframes/dhome.png)
+* [TABLET - Recipe page](savorpages/docs/wireframes/dhome.png)
+* [TABLET - Category page](savorpages/docs/wireframes/dhome.png)
+* [MOBILE - Index page](savorpages/docs/wireframes/dhome.png)
+* [MOBILE - Recipe page](savorpages/docs/wireframes/dhome.png)
+* [MOBILE - Category page](savorpages/docs/wireframes/dhome.png)
 # Design
+[Materialize](https://materializecss.com/) was used and customised for the front-end development.
 ## Colour
+The colors used on my website are white, gray and yellow, the background color is usually white and gray, so to brighten up the look of the page, I decided to add yellow details for headings, and buttons border.
+![Colour Palette](savorpages/docs/palette.png)
 ## Typography
+Fonts was imported from [Google Fonts](https://fonts.google.com/)
+* Rock Salt font has been used for heading across the page.
+![Rock salt](savorpages/docs/rocksalt.png)
+* Sora has been used as a main body font.
+![Rock salt](savorpages/docs/sora.png)
+* Sans serif is set as a backup if any of the fonts fail to load.
 ## Images and icons
-## Wireframes
-
+* Main hero image has been borrowed from Pixabay from [Pexel](https://www.pexels.com/)
+![Hero image](savorpages/static/images/hero.webp)
+* Page logo has been created by myself using [Canva](https://www.canva.com/)
+![Logo](savorpages/docs/logo1.webp)
+* Every image used for a recipe has been provided from [Pexel](https://www.pexels.com/)
 # Features
 
 # Technologies used
