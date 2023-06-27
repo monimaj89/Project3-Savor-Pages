@@ -87,43 +87,44 @@ The add, edit and delete elements are only available to logged in users. The del
  * A registered user deleting his own recipe will return to a recipe page.
  * An admin deleting the category associated with the recipe will return to a category page.
 ### Guest user
-![Guest user journey across the site](savorpages/docs/quest.png)
+![Guest user journey across the site](docs/quest.png)
 ### Registered User
-![Registered user's journey across the site](savorpages/docs/register.png)
+![Registered user's journey across the site](docs/register.png)
 ### Admin user
-![Admin user's permission and journey across the site](savorpages/docs/admin.png)
+![Admin user's permission and journey across the site](docs/admin.png)
 ## Skeleton
 ### Wireframes
-* [DESKTOP - Index page](savorpages/docs/wireframes/dhome.png)
-* [DESKTOP - Recipe page](savorpages/docs/wireframes/dhome.png)
-* [DESKTOP - Category page](savorpages/docs/wireframes/dhome.png)
-* [DESKTOP - Add recipe page](savorpages/docs/wireframes/dhome.png)
-* [DESKTOP - Edit recipe page](savorpages/docs/wireframes/dhome.png)
-* [DESKTOP - Edit category page](savorpages/docs/wireframes/dhome.png)
-* [TABLET - Index page](savorpages/docs/wireframes/dhome.png)
-* [TABLET - Recipe page](savorpages/docs/wireframes/dhome.png)
-* [TABLET - Category page](savorpages/docs/wireframes/dhome.png)
-* [MOBILE - Index page](savorpages/docs/wireframes/dhome.png)
-* [MOBILE - Recipe page](savorpages/docs/wireframes/dhome.png)
-* [MOBILE - Category page](savorpages/docs/wireframes/dhome.png)
+* [DESKTOP - Index page](docs/wireframes/dhome.png)
+* [DESKTOP - Recipe page](docs/wireframes/dhome.png)
+* [DESKTOP - Category page](docs/wireframes/dhome.png)
+* [DESKTOP - Add recipe page](docs/wireframes/dhome.png)
+* [DESKTOP - Edit recipe page](docs/wireframes/dhome.png)
+* [DESKTOP - Edit category page](docs/wireframes/dhome.png)
+* [TABLET - Index page](docs/wireframes/dhome.png)
+* [TABLET - Recipe page](docs/wireframes/dhome.png)
+* [TABLET - Category page](docs/wireframes/dhome.png)
+* [MOBILE - Index page](docs/wireframes/dhome.png)
+* [MOBILE - Recipe page](docs/wireframes/dhome.png)
+* [MOBILE - Category page](docs/wireframes/dhome.png)
 # Design
 [Materialize](https://materializecss.com/) was used and customised for the front-end development.
 ## Colour
 The colors used on my website are white, gray and yellow, the background color is usually white and gray, so to brighten up the look of the page, I decided to add yellow details for headings, and buttons border.
-![Colour Palette](savorpages/docs/palette.png)
+![Colour Palette](docs/palette.png)
 ## Typography
 Fonts was imported from [Google Fonts](https://fonts.google.com/)
 * Rock Salt font has been used for heading across the page.
-![Rock salt](savorpages/docs/rocksalt.png)
+![Rock salt](docs/rocksalt.png)
 * Sora has been used as a main body font.
-![Rock salt](savorpages/docs/sora.png)
+![Sora](docs/sora.png)
 * Sans serif is set as a backup if any of the fonts fail to load.
 ## Images and icons
 * Main hero image has been borrowed from Pixabay from [Pexel](https://www.pexels.com/)
 ![Hero image](savorpages/static/images/hero.webp)
 * Page logo has been created by myself using [Canva](https://www.canva.com/)
-![Logo](savorpages/docs/logo1.webp)
+![Logo](docs/logo1.webp)
 * Every image used for a recipe has been provided from [Pexel](https://www.pexels.com/)
+* Icons used across the page has been provided from [Font Awesome](https://fontawesome.com/)
 # Features
 
 # Technologies used
