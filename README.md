@@ -122,11 +122,102 @@ Fonts was imported from [Google Fonts](https://fonts.google.com/)
 * Main hero image has been borrowed from Pixabay from [Pexel](https://www.pexels.com/)
 ![Hero image](savorpages/static/images/hero.webp)
 * Page logo has been created by myself using [Canva](https://www.canva.com/)
+* On desktop screen logo is clickable and redirect to a home page.
 ![Logo](docs/logo1.webp)
 * Every image used for a recipe has been provided from [Pexel](https://www.pexels.com/)
 * Icons used across the page has been provided from [Font Awesome](https://fontawesome.com/)
 # Features
+## Favicon 
+* As a favicon I wanted to use my own page logo, but it was barely visible, so I decides to use one of the Favicon Emoji from [Favicon](https://favicon.io/).
 
+![Avocado](docs/avocado.png)
+## Multi Page Element
+### Navbar
+![Navbar](docs/navbar.png)
+
+A Navbar displays on every page, contains:
+* Logo
+* Home
+* Recipes
+* Account
+
+### Footer
+* Page name
+* Page Author
+* Current year
+
+![Footer](docs/footer.png)
+
+### Home/Index page
+* Link for recipes
+* Link to create an account
+
+### Recipe page
+* Look through recipes added by other users
+* Add recipe button only for logged users
+
+![Recipe page](docs/recipe.png)
+
+### An account
+* Register page - with the link to login page for already registered users
+![Register form](docs/registerform.png)
+
+* Login page - with the link to register page for user without an account
+![Login](docs/login.png
+)
+## For Registered Users
+### Profile page
+* All information needed to move around the page
+* Recipes added by user
+![Profile](docs/profile.png)
+
+### Add recipe page
+* A form contains:
+    * Category
+    * Recipe name
+    * Recipe description
+    * Ingredients
+    * Preparation
+    * Cook Time
+    * Image
+![Add recipe](docs/addrecipe.png)
+
+### Edit a recipe
+* Allows the user edit his own recipe (excluding an image, which will be added in the future)
+![Edit recipe](docs/edit.png)
+
+### Delete a recipe
+* Allows the user delete his own recipe supported by the defensive function against deleting by the mistake.
+![Delete recipe](docs/delete.png)
+
+### Log out 
+* Log out the user and return to login page
+
+## For Admin user only
+### Manage categories
+* Add a category
+* Edit a category 
+* Delete a category, which also delete all recipes associated with this category
+![Category](docs/category.png)
+
+## Error page
+![Error page](docs/error.png)
+* 404 Error - Page not found 
+* 400 Error - Bad Request
+* 500 Error - Internal Server error
+
+## CRUD Table
+This shows what CRUD functionality is available from each page
+| Page | Create | Read | Update | Delete |
+| --- | --- | --- | --- | --- |
+| Home |  | read intro about the app |  |  |
+| Recipes |  | look through recipes | edit and update recipe (requires log in & only if owner of the recipe) | delete recipe (requires log in) & only if owner of the recipe |
+| Add recipe | choose a category, create a new recipe, upload an image |  |  |  |
+| Register | user profile |  |  |  |
+| Login |  | username for password check |   |  |  |
+| Edit recipe |  | all information about the recipe and image | all information about the recipe |  |
+| Categories, only for admin user | categories | all available categories | all available categories | all available categories plus all recipes associated with the deleted category |
+| Profile |  | user dashboard, custom information for registered users, view all available recipes shared by the logged in user | edit own recipe functionality available to logged in users from their dashboard | delete own recipe functionality available to logged in users from their dashboard |
 # Technologies used
 
 # Testing
