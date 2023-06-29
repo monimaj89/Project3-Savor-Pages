@@ -272,7 +272,7 @@ I would like to expand the project in the future with following features:
     * [MockUp Generator](https://techsini.com/multi-mockup/) - used to create mockup image
 
 # Testing
-
+## All testing undertaken for this project can be found in the [Testing documentation](/TESTING.md)
 
 # Bugs
 
