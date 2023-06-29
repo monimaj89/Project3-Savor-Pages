@@ -218,9 +218,61 @@ This shows what CRUD functionality is available from each page
 | Edit recipe |  | all information about the recipe and image | all information about the recipe |  |
 | Categories, only for admin user | categories | all available categories | all available categories | all available categories plus all recipes associated with the deleted category |
 | Profile |  | user dashboard, custom information for registered users, view all available recipes shared by the logged in user | edit own recipe functionality available to logged in users from their dashboard | delete own recipe functionality available to logged in users from their dashboard |
+## Future Features
+I would like to expand the project in the future with following features:
+* Allow user delete his own account
+* Edit the image along with recipe
+* Voting functionality for user's favourite recipe
+* Recipe search functionality  
+* Add page animation for better UX when viewing the site
 # Technologies used
+* Language
+    * HTML5 - for content and structure of the site
+    * CSS3 - for styling the site
+    * Vanilla JavaScript - to get current year for the footer
+    * jQuery 
+        * Mobile side nav
+        * Navbar collapsible
+        * Navbar dropdown
+        * Floating action button
+        * Modal pop up window
+        * Form dropdown select
+    * Python - for the core of the backend of the site 
+        * Python Modules Used:
+            * blinker==1.6.2
+            * click==8.1.3
+            * cloudinary==1.33.0
+            * Flask==2.3.2
+            * Flask-SQLAlchemy==2.5.1
+            * greenlet==2.0.2
+            * gunicorn==20.1.0
+            * importlib-metadata==6.6.0
+            * itsdangerous==2.1.2
+            * Jinja2==3.1.2
+            * MarkupSafe==2.1.2
+            * psycopg2==2.9.6
+            * SQLAlchemy==1.4.46
+            * urllib3==1.26.16
+            * Werkzeug==2.3.4
+            * zipp==3.15.0
+* Tools 
+    * [GitHub](https://github.com/) - used to host the site
+    * [Git](https://git-scm.com/) -  used for version control and saving work in the repository, using the GitPod extension in Google Chrome to commit to GitHub.
+    * [Heroku](https://id.heroku.com/login) - used to deploy the site
+    * [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) was used for debugging and testing with Lighthouse
+    * [Materialize](https://materializecss.com/) - used for the styling as well as the responsivness of the site
+    * [Cloudinary API](https://cloudinary.com/) - used to enable user add his own image to the recipe
+    * [Balsamiq](https://balsamiq.com/wireframes/) - used to create a wireframes for this project
+    * [Goolge Fonts](https://fonts.google.com/) - Used to select and import font for the project (Rock Salt & Sora)
+    * [Font Awesome](https://fontawesome.com/) - used for icons across the site
+    * [Favicon](https://favicon.io/) - used for a browser tab icon
+    * [Canva](https://www.canva.com/) - used to create a page logo
+    * [Convertio](https://convertio.co/) - used to convert images into webp
+    * [Lucid Chart](https://www.lucidchart.com/) - used to create a structure diagram for REDAME
+    * [MockUp Generator](https://techsini.com/multi-mockup/) - used to create mockup image
 
 # Testing
+
 
 # Bugs
 
