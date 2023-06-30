@@ -30,6 +30,14 @@ I run the CSS code through [W3C CSS Validator](https://jigsaw.w3.org/css-validat
 * [CSS Validation result](docs/cssvalidate.png)
 * [CSS Validation warnings](docs/csswarning.png) - Added quotation marks to font names
 
+## JavaScript Linting
+I ran the JavaScript code through [JSHint](https://jshint.com/), which showed no errors or warnings
+* [JavaScript test result](docs/jshint.png)
+
+## Python Linting
+I ran the code through [CI Python Liner](https://pep8ci.herokuapp.com/), which showed one error:
+* [Line 189: E117 over-indented](docs/python.png) - I am aware of that error since I build the Login functionality, unfortunatelly I couldn't find any solution for that, I've tried to different approach with indentation, and also search for help online, but as long as code is working I've decided leave it like that
+
 # Manual Testing
 | **Test**| **Goal** | **Result** |
 | :--- | :--- | :--- |
