@@ -23,7 +23,7 @@
                         <i class="fa-solid fa-pencil prefix"></i>
                         <input id="recipe_name" name="recipe_name" minlength="3" maxlength="30" type="text"
                             class="validate" required>
-                        <label for="recipe_name">Recipe Name</label>
+                        <label for="recipe_name" class="black-text">Recipe Name</label>
                     </div>
                 </div>
                 <!-- Recipe description -->
@@ -32,7 +32,7 @@
                         <i class="fa-solid fa-align-left prefix"></i>
                         <textarea id="recipe_description" name="recipe_description" class="materialize-textarea"
                             required></textarea>
-                        <label for="recipe_description">Description</label>
+                        <label for="recipe_description" class="black-text">Description</label>
                     </div>
                 </div>
                 <!-- Ingredients -->
@@ -40,7 +40,7 @@
                     <div class="input-field col s12">
                         <i class="fa-solid fa-apple-whole prefix"></i>
                         <textarea id="ingredients" name="ingredients" class="materialize-textarea" required></textarea>
-                        <label for="ingredients">Ingredients</label>
+                        <label for="ingredients" class="black-text">Ingredients</label>
                     </div>
                 </div>
                 <!-- Preparation -->
@@ -48,7 +48,7 @@
                     <div class="input-field col s12">
                         <i class="fa-solid fa-book-open prefix"></i>
                         <textarea id="preparation" name="preparation" class="materialize-textarea" required></textarea>
-                        <label for="preparation">Preparation</label>
+                        <label for="preparation" class="black-text">Preparation</label>
                     </div>
                 </div>
                 <!-- Cook time -->
@@ -56,17 +56,18 @@
                     <div class="input-field col s12">
                         <i class="fa-solid fa-clock prefix"></i>
                         <input id="cook_time" name="cook_time" type="number" class="validate" required>
-                        <label for="cook_time">Cook Time (in minutes)</label>
+                        <label for="cook_time" class="black-text">Cook Time (in minutes)</label>
                     </div>
                 </div>
                 <!-- Image -->
                 <div class="file-field input-field">
                     <div class="btn-small black-text yellow">
-                        <span>pick your image</span>
                         <input type="file" id="image_url" name="image_url" accept="image/*" required>
+                        <label for="image_url" class="black-text">Pick Your Image</label>
                     </div>
                     <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text">
+                        <input class="file-path validate" id="file-path" type="text">
+                        <label for="file-path" class="black-text">Required! Pick your image</label>
                     </div>
                 </div>
                 <!-- Submit button -->

@@ -28,7 +28,7 @@
                         <i class="fa-solid fa-pencil prefix"></i>
                         <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" minlength="3"
                             maxlength="30" type="text" class="validate" required>
-                        <label for="recipe_name">Recipe Name</label>
+                        <label for="recipe_name" class="black-text">Recipe Name</label>
                     </div>
                 </div>
                 <!-- Recipe description -->
@@ -37,7 +37,7 @@
                         <i class="fa-solid fa-align-left prefix"></i>
                         <textarea id="recipe_description" name="recipe_description" class="materialize-textarea"
                             required>{{ recipe.recipe_description }}</textarea>
-                        <label for="recipe_description">Description</label>
+                        <label for="recipe_description" class="black-text">Description</label>
                     </div>
                 </div>
                 <!-- Ingredients -->
@@ -46,7 +46,7 @@
                         <i class="fa-solid fa-apple-whole prefix"></i>
                         <textarea id="ingredients" name="ingredients" class="materialize-textarea" required>
                             {{- recipe.ingredients -}}</textarea>
-                        <label for="ingredients">Ingredients</label>
+                        <label for="ingredients" class="black-text">Ingredients</label>
                     </div>
                 </div>
                 <!-- Preparation -->
@@ -55,7 +55,7 @@
                         <i class="fa-solid fa-book-open prefix"></i>
                         <textarea id="preparation" name="preparation" class="materialize-textarea" required>
                             {{- recipe.preparation -}}</textarea>
-                        <label for="preparation">Preparation</label>
+                        <label for="preparation" class="black-text">Preparation</label>
                     </div>
                 </div>
                 <!-- Cook time -->
@@ -64,7 +64,7 @@
                         <i class="fa-solid fa-clock prefix"></i>
                         <input id="cook_time" name="cook_time" type="number" value="{{ recipe.cook_time }}"
                             class="validate" required>
-                        <label for="cook_time">Cook Time (in minutes)</label>
+                        <label for="cook_time" class="black-text">Cook Time (in minutes)</label>
                     </div>
                 </div>
                 <!-- Submit button -->
