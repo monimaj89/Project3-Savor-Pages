@@ -3,7 +3,7 @@
 ## Welcome
 Savor Pages is a user friendly website for a food lovers, where you can easily add you recipe, share it with other, edit or delete it. See the live site [here](https://savor-pages.herokuapp.com/).
 
-Mockup image
+![Website mock-up](docs/mockup.png)
 
 ## Table content
 
@@ -277,7 +277,79 @@ I would like to expand the project in the future with following features:
 # Bugs
 
 # Deployment
+## Project creation
+I used the [CI GitPod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) to create this project and used GitPod as my IDE.
+
+From the CI GitPod template above the steps to create this project were:
+1. Click on 'Use this template' and select 'Create a new repository'
+2. Enter your chosen repo name
+3. Click 'Create Repository'
+4. Click on the green GitPod button
+5. Choose New workspace picking first one from the list
+6. Click 'Continue'
+
+## Deployment on Heroku
+I used Heroku to deploy this project.
+
+To deploy to Heroku:
+1. In GitPod CLI, the root directory of the project, run:
+    pip3 free --local > requirements.txt
+    to create a requirements.txt file containing project dependencies.
+2. In the Gitpod project workspace root directory, create a new file called Procfile, with capital 'P'.
+    Open the Procfile. Inside the file, check that web: python3 app.py has been added when creating the file
+    Save the file.
+3. Push the 2 new files to the GitHub repository
+4. Login to Heroku, select Create new app, add the name for your app and choose your closest region.
+5. Navigate to the Deploy tab on Heroku dashboard and select Github, search for your repository and click 'connect'.
+6. Navigate to the settings tab, click reveal config vars and input the following:
+
+| Key | Value |
+| :---: | :---: |
+| CLOUDINARY_URL | cloudinary |
+| DATABASE_URL | postgresql |
+| IP | 0.0.0.0 |
+| PORT | 5000 |
+| SECRET_KEY | mysecretkey |
+
+7. Go back to the Deploy tab and select 'Enable Automatic Deploys'
+8. Click deploy branch
+9. Click Open app once the build is complete
+
+## Run locally
+Note: The project will not run locally with database connections unless the user sets up an env.py file configuring IP, PORT, DATABASE_URL, CLOUDAINRY_API and SECRET_KEY. You must have the connection details in order to do this. These details are private and not disclosed in this repository for security purposes.
+
+To Run Locally:
+1. Navigate to the [GitHub Repository](https://github.com/monimaj89/Project3-Savor-Pages)
+2. Click on 'Code' & select 'Download Zip' to download the files locally and open with an IDE or Copy the URL from the top box
+3. If copying the code open your development editor & in the terminal use the 'Git Clone' command followed by the above URL to create a clone of the project locally.
+
+To Fork Project:
+1. Navigate to the [GitHub Repository](https://github.com/monimaj89/Project3-Savor-Pages)
+2. Click on the 'Fork' button at the top right of the page
+3. This will duplicate the project for you to work on
 
 # Credits
+## Code
+* The solution to implementing Cloudinary API to allow users to upload images was inspired by my menthor Gareth McGirr and the Code Institute Slack Community, in particular by [Emma Hewson's MP3](https://github.com/emmahewson/mp3-swimmon)
+
+## Content
+* Sample recipes poster on Savor Pages were sourced from [Simple Recipes](https://www.simplyrecipes.com/)
+
+## Images
+Images for a hero image as well as for a recipes were borrowed from [Pexel](https://www.pexels.com/)
+* [Hero Image by Pixabay](https://www.pexels.com/@pixabay/)
+* [Fuzzy Navel by Lisa Fotios](https://www.pexels.com/@fotios-photos/)
+* [Banana Pancakes by Natalie](https://www.pexels.com/@ikisik/)
+* [Burger by Valeria Boltneva](https://www.pexels.com/@valeriya/)
+* [Banoffee Pie by Los Muertos Crew](https://www.pexels.com/@cristian-rojas/)
+* [Pumpkin Soup by Pixabay](https://www.pexels.com/@pixabay/)
+* [Crispy Shrimp Dumpling by Kaysha](https://www.pexels.com/@kaysha-147543/)
+
+## Acknowledgements
+
+* My mentor [Gareth McGirr](https://github.com/Gareth-McGirr) for all his help and advice throughout the project
+* The whole team at [Code Institute](https://codeinstitute.net/) for their teaching and support
+* Slack Community always so helpful and patient.
 
 
+[Go to Top](#savor-pages)
