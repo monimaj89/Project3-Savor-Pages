@@ -30,10 +30,14 @@
         </div>
     </div>
     <!-- Display user's recipes -->
-    {% if recipe_list %}
     <div>
         <h4 class="center-align yellow-text yellow-darken-4 rock-font text-shadow">Your recipes</h4>
     </div>
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_recipe') }}" class="waves-effect waves-yellow black-text btn my-btn text-shadow">Add
+            Recipe <i class="fa-solid fa-plus"></i></a>
+    </div>
+    {% if recipe_list %}
     <div class="row">
         {% for recipe in recipe_list %}
         <div class="col s12 col l6">
