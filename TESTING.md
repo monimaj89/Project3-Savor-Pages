@@ -20,7 +20,7 @@ Every other page was run through the HTML validator using source code, and all p
 * [Category](docs/htmlcategory.png)
 * [Add Category](docs/htmladdcategory.png)
 * [Edit Category](docs/htmleditcategory.png)
-* [Profile](docs/.png) - 1 error - fix - added an alt attribute to the image
+* [Profile](docs/htmlprofile.png) - 1 error - fix - added an alt attribute to the image
 * [Register](docs/htmlregister.png)
 * [Login](docs/htmllogin.png)
 * [Error](docs/htmlerror.png)
@@ -37,6 +37,33 @@ I ran the JavaScript code through [JSHint](https://jshint.com/), which showed no
 ## Python Linting
 I ran the code through [CI Python Liner](https://pep8ci.herokuapp.com/), which showed one error:
 * [Line 189: E117 over-indented](docs/python.png) - I am aware of that error since I build the Login functionality, unfortunatelly I couldn't find any solution for that, I've tried to different approach with indentation, and also search for help online, but as long as code is working I've decided leave it like that
+
+## Lighthouse Testing
+* [Home](docs/home.png)
+* [Recipes](docs/h.png)
+* [Add Recipe](docs/ht.png)
+* [Edit Recipe](docs/ht.png)
+* [Category](docs/html.png)
+* [Add Category](docs/html.png)
+* [Edit Category](docs/htmled.png)
+* [Profile](docs/.png)
+* [Register](docs/htmlre.png)
+* [Login](docs/ht.png)
+* [Error](docs/or.png)
+
+## Wave Testing
+I ran the site through the [Wave Web Accessibility Evaluation Tool](https://wave.webaim.org/). There were some minor errors & alerts which I was unable to fix which are detailed in the notes below. Based on the research done in to these errors, and the fact that they are mostly part of the external code which I have no control I have accepted them and marked the tests as passed for the purposes and scope of this project. Full results below.
+* [Home](docs/homewave.png) - Empty link errors for a floating action button, which are additional buttons for register and login forms, and use only icons
+* [Recipes](docs/recipewave.png)
+* [Add Recipe](docs/addrecipewave.png) - Missing Form Label error on dropdown menu caused by Materialized JavaScript code creating a new input element when dropdown is populated
+* [Edit Recipe](docs/editrecipewave.png) - Missing Form Label error on dropdown menu caused by Materialized JavaScript code creating a new input element when dropdown is populated
+* [Category](docs/categorywave.png)
+* [Add Category](docs/addcategorywave.png)
+* [Edit Category](docs/editcategorywave.png)
+* [Profile](docs/profilewave.png)
+* [Register](docs/registerwave.png)
+* [Login](docs/loginwave.png)
+* [Error](docs/errorwave.png)
 
 # Manual Testing
 | **Test**| **Goal** | **Result** |
