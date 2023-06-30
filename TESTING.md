@@ -4,19 +4,31 @@ This is the testing documentation for my web application Savor Pages. Full [READ
 See the live site [here](https://savor-pages.herokuapp.com/).
 # Validation 
 ## HTML Validation
-| **Feature**| **Expected Outcome** | **Result** | **Pass/Fails**
-| :--- | :--- | :--- | :--- |
-| HOME             | - | -                         | -          |
-| RECIPES         | - | -                                                                                   | -           |
-| ADD RECIPE         | - | -                                                                                 | -           |
-| EDIT RECIPE        | - | -                                                                                 | -           |
-| CATEGORY         | - | --                                                                                                | -            |
-| ADD CATEGORY        | = | -                                                                        | -           |
-| EDIT CATEGORY       | -s | -                                                                       | -          |
-| PROFILE          | - | -                                                                           | -           |
-| REGISTER         | -- |                  -                                                        |  -           |
-| LOGIN | -| -                                                                                       |-           |
-| ERROR             |- | -                                                                             | -      |
+The initial test of the page validated by URL using [W3C HTML Validator](https://validator.w3.org/#validate_by_uri) showed two errors:
+* Empty id and class attribuite for an "ul" element - which was unnecessary and has been deleted.
+* Stray "ul" and "li" element - were misplaced in the code and were fixed
+
+And two warnings:
+* Section lacks heading - which has been change to a div element withouth any changes to page layout
+* The "type" attribute unnecessary for JavaScript resources - which concerned my jquery script from materialize and has been deleted
+
+Every other page was run through the HTML validator using source code, and all pages passed, except as desribes by the pages below
+* [Home](docs/htmlhome.png)
+* [Recipes](docs/htmlrecipes.png)
+* [Add Recipe](docs/htmladdrecipe.png) - 1 error - fix - added an alt attribute to the image
+* [Edit Recipe](docs/htmleditrecipe.png)
+* [Category](docs/htmlcategory.png)
+* [Add Category](docs/htmladdcategory.png)
+* [Edit Category](docs/htmleditcategory.png)
+* [Profile](docs/.png) - 1 error - fix - added an alt attribute to the image
+* [Register](docs/htmlregister.png)
+* [Login](docs/htmllogin.png)
+* [Error](docs/htmlerror.png)
+
+## CSS Validation
+I run the CSS code through [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and showed no errors
+* [CSS Validation result](docs/cssvalidate.png)
+* [CSS Validation warnings](docs/csswarning.png) - Added quotation marks to font names
 
 # Manual Testing
 | **Test**| **Goal** | **Result** |
