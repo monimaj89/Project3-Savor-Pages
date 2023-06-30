@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fa-solid fa-arrow-pointer prefix"></i>
-                        <select name="category_id" id="category_id" class="validate">
+                        <select name="category_id" id="category_id" class="validate" required>
                             <option value="" class="disabled selected black-text">Select category</option>
                             {% for category in categories %}
                             <option value="{{ category.id }}" class="black-text">{{ category.category_name }}</option>
@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fa-solid fa-pencil prefix"></i>
-                        <input id="recipe_name" name="recipe_name" minlength="3" maxlength="100" type="text"
+                        <input id="recipe_name" name="recipe_name" minlength="3" maxlength="30" type="text"
                             class="validate" required>
                         <label for="recipe_name">Recipe Name</label>
                     </div>
@@ -69,13 +69,6 @@
                         <input class="file-path validate" type="text">
                     </div>
                 </div>
-                <!-- <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fa-solid fa-image prefix"></i>
-                        <input type="file" id="image_url" name="image_url" accept="image/*">
-                        <label for="image_url">Image</label>
-                    </div>
-                </div> -->
                 <!-- Submit button -->
                 <div class="row form">
                     <button type="submit"
