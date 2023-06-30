@@ -11,12 +11,12 @@ body {
 
 /* font for buttons overrides materialize button's font */
 .btn {
-    font-family: 'Sora', sans serif;
+    font-family: "Sora", "sans serif";
 }
 
 /* font for headers */
 .rock-font {
-    font-family: 'Rock Salt', sans serif;
+    font-family: "Rock Salt", "sans serif";
 }
 
 /* text shadow effect for text */
