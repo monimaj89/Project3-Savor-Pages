@@ -1,3 +1,5 @@
+// jQuery code for navbar, modal and category select functionality
+
 $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.collapsible').collapsible();
@@ -7,7 +9,7 @@ $(document).ready(function(){
     $('select').formSelect();
   });
 
-
+//  Updates current year in the footer
 const currentYear = document.querySelector("#current-year");
 currentYear.innerText = new Date().getFullYear();
 
