@@ -273,7 +273,15 @@ I would like to expand the project in the future with following features:
 # Testing
 ## All testing undertaken for this project can be found in the [Testing documentation](/TESTING.md)
 
-# Bugs
+# Bugs, Issues and Solutions
+| # | Bugs, Errors and Issues | Solutions |
+| :--- | :--- | :--- |
+| 1 | NoneType error object has no attribute 'drivername' when attempting to generate and migrate the models into a new database in Postgres|  After moving my workspace to a GitPod CI Team, I've lost my env.py file and I had to create it again |
+| 2 | After added a new column to my models and updated the database, column still couldn't be found | I recreated the database with terminal commands like when creating it first time, but after a little help from Slack community I realize I had to drop the database first with the DROP_DATABASE command, and then create it all again |
+| 3 | Edit a recipe by other users | I wasn't aware about a little hack that the user is able to edit other user's recipe by changing the url, I've added a defensive programming to avoid that kind of errors  |
+| 4 | Not displaying the recipe's category on recipe page | The categories were not returned in routes.py, adding the 'categories = list(Category.query.order_by(Category.category_name).all())' to the recipe routes fixed the problem|
+| 5 | Recipes' images are not displaying properly. Depends of uploaded images and screen size, image is squished or stretched | I use Materialized image card to display recipes, and I hoped the image will render appopriate to the card size, I've set up max-height to the card image, and then the cards display evenly but the bigger images are squished. I've also edited the Cloudinary Upload Manipulation for the image size, but it doesn't seem to work. On the user dashboard I left the note for the best image size to being upload for the best visual effect |
+| 6 | No label for select dropdown menu on add recipe form | While validating in WAVE Web AIM, I found that the label associated with Materialize's dropdown select inputs no longer correctly labels the input. This issue arises because Materialize uses JavaScript to create a new text input that lacks the correct ID. Unfortunately, rebuilding the dropdown form input was not feasible due to time constraints. Consequently, this lack of accessibility is regrettable, and in the future, I would consider building my own solution to avoid this problem. |
 
 # Deployment
 ## Project creation
