@@ -137,13 +137,16 @@ def edit_recipe(recipe_id):
 @app.route("/delete_recipe/<int:recipe_id>")
 def delete_recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
-    # Allows to delete only user's own recipe
-    if "user" not in session or session["user"] != recipe.created_by:
+    # Allows to delete only user's own recipe or
+    # if the user is an admin
+    if "user" not in session or (session["user"] != recipe.created_by and
+                                 session["user"] != "admin"):
         flash("You can delete only your own recipes or must be logged in!")
         return redirect(url_for("recipes"))
-    db.session.delete(recipe)
-    db.session.commit()
-    return redirect(url_for("recipes"))
+    else:
+        db.session.delete(recipe)
+        db.session.commit()
+        return redirect(url_for("recipes"))
 
 
 # Register, login, log out and profile functionality from
