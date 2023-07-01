@@ -115,3 +115,4 @@ I ran the site through the [Wave Web Accessibility Evaluation Tool](https://wave
 | 2. Add the category | On category page, by 'ADD CATEGORY' button, admin can add a new category |![Add category](docs/addcat.png) |
 | 3. Edit a category| Admin can edit any category |![Edit category](docs/editcategory.png) |
 | 4. Delete a category | Admin can delete any category including all recipes associated with this category. Pop up window will display the warning message  |![Delete category](docs/deletecat.png) |
+| 5. Delete every recipe | Admin can delete any recipe created by other users  |![Delete recipe](docs/delete.png) |

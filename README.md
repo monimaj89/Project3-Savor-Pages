@@ -43,9 +43,10 @@ As a lfood lover, but not necessarily cooking chef, the choice of this project w
 * Be warned of the consequences of deleting a recipe.
 * Have my own member user dashboard (read functionality).
 ### Admin Goals
-* Have the ability to maintain the recipes, in particular the categories
+* Have the ability to maintain the categories
 * Add, edit and delete my own recipes
-* Add, edit, and delete any recipe by category
+* Delete any recipe added by other users
+* Delete a category with all recipes associated
 ## Scope
 ### Feature Ideas Planning
 When planning the App features and scope, I drew up an Importance Viability analysis of these features, please see below:
@@ -61,14 +62,16 @@ When planning the App features and scope, I drew up an Importance Viability anal
 | 7 | Send message and/ or feedback to Admin | 5 | 2 |
 | 8 | Receive Notifications on users activities | 2 | 2 |
 | 9 | Search for Recipes | 5 | 5 |
-| 10 | Search Recipes by Ingredients | 3 | 1 |
-| 11 | Search Recipes by Category | 5 | 2 |
-| 12 | Share Recipes on Social Media | 3 | 3 |
-| 13 | Display Suggested Recipes | 3 | 2 |
-| 14 | Access to Custom User Dashboard (Read Functionality) | 4 | 5 |
-| 15 | User Action Validation | 5 | 5 |
+| 10 | Vote for the favourite recipe | 3 | 4 |
+| 11 | Search Recipes by Ingredients | 3 | 1 |
+| 12 | Search Recipes by Category | 5 | 2 |
+| 13 | Share Recipes on Social Media | 3 | 3 |
+| 14 | Display Suggested Recipes | 3 | 2 |
+| 15 | Access to Custom User Dashboard (Read Functionality) | 4 | 5 |
+| 16 | User Action Validation | 5 | 5 |
 
-Based on the results of the Feature Ideas Planning, I have decided to attempt to implement features numbers 1, 2, 3, 5, 14 and 15 for this production release and postpone the remaining features due to time limitations.
+
+Based on the results of the Feature Ideas Planning, I have decided to attempt to implement features numbers 1, 2, 3, 5, 15 and 16 for this production release and postpone the remaining features due to time limitations.
 
 ### Functionality Requirements
 * Clean and themed presentation of recipe details.
@@ -193,6 +196,8 @@ A Navbar displays on every page, contains:
 * Log out the user and return to login page
 
 ## For Admin user only
+### Manage recipes
+* Delete every recipe
 ### Manage categories
 * Add a category
 * Edit a category 
@@ -210,7 +215,7 @@ This shows what CRUD functionality is available from each page
 | Page | Create | Read | Update | Delete |
 | --- | --- | --- | --- | --- |
 | Home |  | read intro about the app |  |  |
-| Recipes |  | look through recipes | edit and update recipe (requires log in & only if owner of the recipe) | delete recipe (requires log in) & only if owner of the recipe |
+| Recipes |  | look through recipes | edit and update recipe (requires log in & only if owner of the recipe) | delete recipe (requires log in) & only if owner of the recipe or admin|
 | Add recipe | choose a category, create a new recipe, upload an image |  |  |  |
 | Register | user profile |  |  |  |
 | Login |  | username for password check |   |  |  |
