@@ -77,3 +77,41 @@ I ran the site through the [Wave Web Accessibility Evaluation Tool](https://wave
 | Category ID | This gets stored as category_id and display for every recipe added | Pass |
 | Associated Recipes | These get deleted when a category relevant to them is deleted by admin | Pass |
 | Modal is semantically correct | All HTML Validation to Pass and modal works with out causing a 500 Internal Server Error | Pass |
+
+# Testing User Stories 
+## First Time User
+
+|   Target      |   Outcome     | Image |
+| ------------- |-------------| -----------|
+| 1. Immediately understand the main purpose and use of the site and how to use it  | Find a recipe button which redirect to a recipe page and an additional button to create an account | ![Page Info](docs/pageinfo.png) |
+| 2. Look through all recipes | Click on 'FIND A RECIPE' button to visit a recipe page with all available recipes |![Recipe Page](docs/recipepage.png) |
+| 3. Add a recipe | On recipe page there is a button to add a recipe available to see for everybody but not logged user will be redirect to login page with message to login to add a recipe |![Login to add a recipe](docs/logtoadd.png) |
+| 4. Login/ create an user account | Click on the account icon to display another two icons, one for register and one for login, which will redirect to the appropriate forms  |![Account icon](docs/accounticon.png) ![Register Form](docs/registerform.png) ![Login form](docs/login.png) |
+| 5. Switch between register and login forms | Both forms provide a link to switch between pages. For already registered user, below register form, link redirects to a login form, and for first time visitor who got lost on login page, link redirects to a register form | ![Login link](docs/loginlink.png) ![Register Link](docs/registerlink.png) |
+
+----
+
+## Registered User
+
+|   Target      |   Outcome     | Image |
+| ------------- |-------------| -----------|
+| 1. Learn more about what I can do on the Savor Pages site. | From the User Dashboard (Profile Page) registered users are provided additional information about what they are able to do when using the site | ![Profile Page](docs/profile.png) |
+| 2. Add a recipe |'ADD RECIPE' button (on navbar, on recipe page, or on profile page) redirects to a form where user can add a recipe based on a category. |![Add a recipe category](docs/addrecipecat.png)  |
+| 3. Add a recipe without any blank fields | All fields are required to succesfully add a recipe. Not filling all the fields will show a warning note (not choosing the category will result with a console error) |![Recipe empty field](docs/fields.jpeg)|
+| 4. Add an image to recipe | A recipe image has been introduced by myself as an additional function for the better visual effect of the recipe. It isn't the perfect functionality, because depending of the image size and screen size, an image can be squished or stretched. Based on my observations the best image size to display properly is 600x400 |![Recipe Image](docs/recipesize.png)  |
+| 5. Edit your own recipe | User can edit his own recipe, including, changing the category, and any other fields except an image (future feature) The message about succesfully updated recipe will be display above the form | ![Edit message](docs/editmessage.png) ![Edit Recipe](docs/edit.png)  |
+| 6. Edit other user's recipe  | The defensive programming has been used to protect the recipes being edited by other users | ![Edit warning](docs/ownrecipe.png) |
+| 7. Delete a recipe | User can delete his own recipe and will be warned about the action before deleting |![Delete recipe](docs/delete.png) |
+| 8. Have access to tools user may need in order to add, update or delete the recipe | There are three button across the page to add a recipe, and below user's recipe there are buttons for edit and delete his own recipe | ![Add, edit, delete a recipe](docs/addeditdelete.png)  |
+| 9. Log out | Navbar provides a Log out button for user to leave his account, which redirects back to Login form and flash a message for user being logged out | ![Log out](docs/logout.png)|
+
+---- 
+
+## Admin user
+
+|   Target      |   Outcome     | Image |
+| ------------- |-------------| -----------|
+| 1. Have the ability to maintain the categories | Admin user can add, edit and delete the categories | ![Category](docs/category.png) |
+| 2. Add the category | On category page, by 'ADD CATEGORY' button, admin can add a new category |![Add category](docs/addcat.png) |
+| 3. Edit a category| Admin can edit any category |![Edit category](docs/editcategory.png) |
+| 4. Delete a category | Admin can delete any category including all recipes associated with this category. Pop up window will display the warning message  |![Delete category](docs/deletecat.png) |

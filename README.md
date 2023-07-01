@@ -33,13 +33,12 @@ As a lfood lover, but not necessarily cooking chef, the choice of this project w
 ### First time User
 * Immediately understand the main purpose and use of the site and how to use it.
 * Look through all recipes.
-* Register/ create a user account.
+* Login/ create an user account.
 ### Registered User
 * Learn more about what I can do on the Savor Pages site.
-* Add, edit, retrieve and delete my own recipes.
+* Add, edit and delete my own recipes.
 * Add my own recipes, based on categories.
 * Upload an image with my recipes.
-* Be able to add additional information about my recipe.
 * Have access to tools I may need in order to add, update or delete my recipes.
 * Be warned of the consequences of deleting a recipe.
 * Have my own member user dashboard (read functionality).
