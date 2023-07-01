@@ -34,6 +34,12 @@ body {
     margin: 0;
 }
 
+h6 {
+    margin: 2rem 0 2rem 0;
+    line-height: 140%;
+}
+
+
 .wrapper {
     border: 2px solid #ffff00;
     box-shadow: 1rem 1rem 1.4rem #bcbfc2, 1rem 1rem 1.4rem #fff;
@@ -219,4 +225,10 @@ margin-top: 2.5rem;
     justify-items: center;
     align-items: center;
     margin: 20px;
+}
+
+
+/* Media query for tablet */
+@media(min-width: 601px) and (max-width: 992px){
+.container {width: 90%}
 }
