@@ -17,9 +17,13 @@
                 <!-- Action buttons for register and login -->
                 <div class="col s12">
                     <div class="fixed-action-btn action-btn text-shadow">
+                        {% if session.user %}
+                        <a  href="{{ url_for('profile', username=session['user']) }}" class="btn-floating btn-large yellow lighten-1">
+                            <i class="fa-regular fa-address-card" style="color: #000000;"></i></a>
+                        {% else %}
                         <a class="btn-floating btn-large yellow lighten-1">
-                            <i class="fa-regular fa-address-card" style="color: #000000;"></i>
-                        </a>
+                            <i class="fa-regular fa-address-card" style="color: #000000;"></i></a>
+                        {% endif %}
                         <ul>
                             <li><a href="{{ url_for('login') }}" class="btn-floating blue"><i class="fa-solid fa-user"></i></a></li>
                             <li><a href="{{ url_for('register') }}" class="btn-floating green"><i class="fa-solid fa-user-plus"></i></a></li>
