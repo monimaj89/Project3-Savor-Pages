@@ -81,8 +81,23 @@ I ran the site through the [Wave Web Accessibility Evaluation Tool](https://wave
 
 # Responsivness
 Responsive design testing has been carried out on different devices and screen sizes using [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+### Mobile
+* [Profile](docs/responsiveness/mobileprofile.png)
+* [Home](docs/responsiveness/mobilehome.png)
+* [Recipe](docs/responsiveness/mobilerecipe.png)
+* [Login](docs/responsiveness/mobilelogin.png)
 
+### Tablet
+* [Home](docs/responsiveness/tablethome.png)
+* [Add Recipe](docs/responsiveness/tabletaddrecipe.png)
+* [Profile](docs/responsiveness/tabletprofile.png)
+* [Profile - tablet2](docs/responsiveness/nesthubmaxprofile.png)
 
+### Desktop
+* [Profile](docs/responsiveness/desktopprofile.png)
+* [Recipe](docs/responsiveness/desktoprecipe.png)
+* [Category](docs/responsiveness/desktopcat.png)
+* [Register](docs/responsiveness/desktopregister.png)
 
 
 # Testing User Stories 
