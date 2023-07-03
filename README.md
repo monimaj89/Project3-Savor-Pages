@@ -89,29 +89,46 @@ The add, edit and delete elements are only available to logged in users. The del
  * A registered user deleting his own recipe will return to a recipe page.
  * An admin deleting the category associated with the recipe will return to a category page.
 ### Guest user
+* Yellow --> Access
+* Grey --> No access
 ![Guest user journey across the site](docs/quest.png)
 ### Registered User
+* Yellow --> Access
+* Grey --> No access
 ![Registered user's journey across the site](docs/register.png)
 ### Admin user
+* Yellow --> Access
+* Grey --> No access
 ![Admin user's permission and journey across the site](docs/admin.png)
 ## Skeleton
 ### Wireframes
-* [DESKTOP - Index page](docs/wireframes/home.png)
-* [DESKTOP - Recipe page](docs/wireframes/recipe.png)
-* [DESKTOP - Category page](docs/wireframes/category.png)
-* [DESKTOP - Add recipe page](docs/wireframes/addrecipe.png)
-* [DESKTOP - Add category page](docs/wireframes/addcategory.png)
-* [DESKTOP - Edit recipe page](docs/wireframes/editrecipe.png)
-* [DESKTOP - Edit category page](docs/wireframes/editcategory.png)
-* [DESKTOP - Login](docs/wireframes/Login.png)
-* [DESKTOP - Register](docs/wireframes/register.png)
-* [DESKTOP - Profile](docs/wireframes/profile.png)
-* [TABLET - Index page](docs/wireframes/dhome.png)
-* [TABLET - Recipe page](docs/wireframes/dhome.png)
-* [TABLET - Category page](docs/wireframes/dhome.png)
-* [MOBILE - Index page](docs/wireframes/dhome.png)
-* [MOBILE - Recipe page](docs/wireframes/dhome.png)
-* [MOBILE - Category page](docs/wireframes/dhome.png)
+#### Mobile 
+* [Home](docs/wireframes/homemob.png)
+* [Recipe](docs/wireframes/recipemob.png)
+* [Profile](docs/wireframes/profilemob.png)
+* [Register](docs/wireframes/registermob.png)
+* [Category](docs/wireframes/categorymon.png)
+* [Edit Recipe](docs/wireframes/editrecipemob.png)
+
+#### Tablet
+* [Home](docs/wireframes/hometab.png)
+* [Recipe](docs/wireframes/recipetab.png)
+* [Profile](docs/wireframes/profiletab.png)
+* [Add Recipe](docs/wireframes/addrecipetab.png)
+* [Category](docs/wireframes/categorytab.png)
+
+#### Desktop
+* [Home](docs/wireframes/home.png)
+* [Recipe](docs/wireframes/recipe.png)
+* [Category](docs/wireframes/category.png)
+* [Add Recipe](docs/wireframes/addrecipe.png)
+* [Add Category](docs/wireframes/addcategory.png)
+* [Edit Recipe](docs/wireframes/editrecipe.png)
+* [Edit Category](docs/wireframes/editcategory.png)
+* [Login](docs/wireframes/Login.png)
+* [Register](docs/wireframes/register.png)
+* [Profile](docs/wireframes/profile.png)
+
 # Design
 [Materialize](https://materializecss.com/) was used and customised for the front-end development.
 ## Colour
