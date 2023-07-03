@@ -11,7 +11,7 @@ Savor Pages is a user friendly website for a food lovers, where you can easily a
 Savor Pages is a recipe sharing and management Application built using Python, Flask+SQLAlchemy, Materialize, Jinja2 and Java Script jQuery. It uses Cloudinary API to manage user-uploaded images.
 
 User Authentication is handled using relational database (PostgreSQL using Flask+SQLAlchemy).
-Standard CRUD data manipulation is handled using a relational database Flask+PyMongo.
+Standard CRUD data manipulation is handled using a relational database with Flask.
 Savor Pages is my third milestone project for Code Institute's Level 5 Diploma in Web Application Development.
 
 As a lfood lover, but not necessarily cooking chef, the choice of this project was quite an easy decision. A site where everyone can share their ideas for recipes along with ingredients and preparations steps seems to be the perfect idea for someone who loves to eat and is not necessarily a chef, like me.
@@ -120,15 +120,19 @@ The colors used on my website are white, gray and yellow, the background color i
 ## Typography
 Fonts was imported from [Google Fonts](https://fonts.google.com/)
 * Rock Salt font has been used for heading across the page.
+
 ![Rock salt](docs/rocksalt.png)
 * Sora has been used as a main body font.
+
 ![Sora](docs/sora.png)
 * Sans serif is set as a backup if any of the fonts fail to load.
 ## Images and icons
 * Main hero image has been borrowed from Pixabay from [Pexel](https://www.pexels.com/)
+
 ![Hero image](savorpages/static/images/hero.webp)
 * Page logo has been created by myself using [Canva](https://www.canva.com/)
 * On desktop screen logo is clickable and redirect to a home page.
+
 ![Logo](docs/logo1.webp)
 * Every image used for a recipe has been provided from [Pexel](https://www.pexels.com/)
 * Icons used across the page has been provided from [Font Awesome](https://fontawesome.com/)
@@ -155,8 +159,9 @@ A Navbar displays on every page, contains:
 ![Footer](docs/footer.png)
 
 ### Home/Index page
-* Link for recipes
-* Link to create an account
+* Button for recipes
+* Button to create an account
+* For already logged in user the button will redirect to user's profile page
 
 ### Recipe page
 * Look through recipes added by other users
@@ -166,15 +171,18 @@ A Navbar displays on every page, contains:
 
 ### An account
 * Register page - with the link to login page for already registered users
+
 ![Register form](docs/registerform.png)
 
 * Login page - with the link to register page for user without an account
+
 ![Login](docs/login.png
 )
 ## For Registered Users
 ### Profile page
 * All information needed to move around the page
 * Recipes added by user
+
 ![Profile](docs/profile.png)
 
 ### Add recipe page
@@ -186,14 +194,17 @@ A Navbar displays on every page, contains:
     * Preparation
     * Cook Time
     * Image
+
 ![Add recipe](docs/addrecipe.png)
 
 ### Edit a recipe
 * Allows the user edit his own recipe (excluding an image, which will be added in the future)
+
 ![Edit recipe](docs/edit.png)
 
 ### Delete a recipe
 * Allows the user delete his own recipe supported by the defensive function against deleting by the mistake.
+
 ![Delete recipe](docs/delete.png)
 
 ### Log out 
@@ -206,6 +217,7 @@ A Navbar displays on every page, contains:
 * Add a category
 * Edit a category 
 * Delete a category, which also delete all recipes associated with this category
+
 ![Category](docs/category.png)
 
 ## Error page
