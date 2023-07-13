@@ -1,13 +1,37 @@
 # Savor Pages
 
-## Welcome
+# Welcome
 Savor Pages is a user friendly website for a food lovers, where you can easily add you recipe, share it with other, edit or delete it. See the live site [here](https://savor-pages.herokuapp.com/).
 
 ![Website mock-up](docs/mockup.png)
 
-## Table content
+# Table content
+* [Project Overwiev](#project-overwiev)
+* [User Experience](#user-experience)
+    * [Project Goals](#project-goals)
+    * [User Stories](#user-stories)
+    * [Scope](#scope)
+* [Structure Plan](#structure-plan)
+* [Skeleton](#skeleton)
+* [Design](#design)
+    * [Colour](#colour)
+    * [Typography](#typography)
+    * [Images & Icons](#images-and-icons)
+* [Features](#features)
+    * [Multi Page element](#multi-page-element)
+    * [For Registered users](#for-registered-users)
+    * [For Admin user](#for-admin-user-only)
+    * [Error page](#error-page)
+    * [CRUD Table](#crud-table)
+    * [Future features](#future-features)
+* [Technologies](#technologies-used)
+* [Testing](#testing)
+* [Bugs, Issues & Solutions](#bugs-issues-and-solutions)
+* [Deployment](#deployment)
+* [Credits](#credits)
 
-## Project Overwiev
+
+# Project Overwiev
 Savor Pages is a recipe sharing and management application built using Python, Flask+SQLAlchemy, Materialize, Jinja2 and Java Script jQuery. It uses Cloudinary API to manage user-uploaded images.
 
 User Authentication is handled using relational database (PostgreSQL using Flask+SQLAlchemy).
