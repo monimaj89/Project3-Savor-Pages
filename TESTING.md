@@ -53,17 +53,29 @@ I ran the code through [CI Python Liner](https://pep8ci.herokuapp.com/), which s
 * [Line 189: E117 over-indented](docs/python.png) - I am aware of that error since I build the Login functionality, unfortunatelly I couldn't find any solution for that, I've tried to different approach with indentation, and also search for help online, but as long as code is working I've decided leave it like that
 
 ## Lighthouse Testing
-* [Home](docs/home.png)
-* [Recipes](docs/h.png)
-* [Add Recipe](docs/ht.png)
-* [Edit Recipe](docs/ht.png)
-* [Category](docs/html.png)
-* [Add Category](docs/html.png)
-* [Edit Category](docs/htmled.png)
-* [Profile](docs/.png)
-* [Register](docs/htmlre.png)
-* [Login](docs/ht.png)
-* [Error](docs/or.png)
+The site was run through Google Chrome Dev Tools Lighthouse on mobile devices. 
+Several downgrading bugs were found:
+
+* All pages have lower Best Practise due to navbar logo aspect ratio which was set to match the navbar size
+* Lower perfomarnce on recipe size may occur due to images format added by user
+* Lower Accessibility on Add recipe page due to Materialized bug issue describes in README.md Bugs section no 6
+* Lower SEO on Login and Register page regarding:
+    * not crawable links - refers to an account collapsible list on mobile sidenav, which may be another materialize bug
+    * not valid robots.txt - after a research I came to conclusion that error is not supposed to occured on third project, because it refers to google search function, which is not relevant in this project and I couldn't found any solution
+* Lower performance on an error page due to image size, which was reduced twice 
+    
+    
+* [Home](docs/lighthouse/lighthome.png)
+* [Recipes](docs/lighthouse/lightrecipe.png)
+* [Add Recipe](docs/lighthouse/lightaddrecipe.png)
+* [Edit Recipe](docs/lighthouse/lighteditrecipe.png)
+* [Category](docs/lighthouse/lightcat.png)
+* [Add Category](docs/lighthouse/lightaddcat.png)
+* [Edit Category](docs/lighthouse/lighteditcat.png)
+* [Profile](docs/lighthouse/lightprofile.png)
+* [Register](docs/lighthouse/lightregister.png)
+* [Login](docs/lighthouse/lightlogin.png)
+* [Error](docs/lighthouse/lighterror.png)
 
 ## Wave Testing
 I ran the site through the [Wave Web Accessibility Evaluation Tool](https://wave.webaim.org/). There were some minor errors & alerts which I was unable to fix which are detailed in the notes below. Based on the research done in to these errors, and the fact that they are mostly part of the external code which I have no control I have accepted them and marked the tests as passed for the purposes and scope of this project. Full results below.
