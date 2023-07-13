@@ -4,6 +4,23 @@ This is the testing documentation for my web application Savor Pages. Full [READ
 
 See the live site [here](https://savor-pages.herokuapp.com/).
 
+# Table of content
+* [Manual Testing](#manual-testing)
+* [Validation](#validation)
+    * [HTML Validation](#html-validation)
+    * [CSS Validation](#css-validation)
+    * [JavaScript Linting](#javascript-linting)
+    * [Python Linting](#python-linting)
+    * [Lighthouse Testing](#lighthouse-testing)
+    * [Wave Testing](#wave-testing)
+* [Responsiveness](#responsiveness)
+* [Testing User Stories](#testing-user-stories)
+    * [First Time User](#first-time-user)
+    * [Registered User](#registered-user)
+    * [Admin User](#admin-user)
+
+
+
 # Manual Testing
 | **Test**| **Goal** | **Result** |
 | :--- | :--- | :--- |
@@ -92,7 +109,7 @@ I ran the site through the [Wave Web Accessibility Evaluation Tool](https://wave
 * [Login](docs/loginwave.png)
 * [Error](docs/errorwave.png)
 
-# Responsivness
+# Responsiveness
 Responsive design testing has been carried out on different devices and screen sizes using [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 ### Mobile
 * [Profile](docs/responsiveness/mobileprofile.png)
