@@ -1,6 +1,7 @@
 ![MockUp](docs/mockup.png)
 
 This is the testing documentation for my web application Savor Pages. Full [README available here](/README.md)
+
 See the live site [here](https://savor-pages.herokuapp.com/).
 
 # Manual Testing

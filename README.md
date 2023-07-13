@@ -8,7 +8,7 @@ Savor Pages is a user friendly website for a food lovers, where you can easily a
 ## Table content
 
 ## Project Overwiev
-Savor Pages is a recipe sharing and management Application built using Python, Flask+SQLAlchemy, Materialize, Jinja2 and Java Script jQuery. It uses Cloudinary API to manage user-uploaded images.
+Savor Pages is a recipe sharing and management application built using Python, Flask+SQLAlchemy, Materialize, Jinja2 and Java Script jQuery. It uses Cloudinary API to manage user-uploaded images.
 
 User Authentication is handled using relational database (PostgreSQL using Flask+SQLAlchemy).
 Standard CRUD data manipulation is handled using a relational database with Flask.
@@ -255,6 +255,7 @@ This shows what CRUD functionality is available from each page
 | Edit recipe |  | all information about the recipe and image | all information about the recipe |  |
 | Categories, only for admin user | categories | all available categories | all available categories | all available categories plus all recipes associated with the deleted category |
 | Profile |  | user dashboard, custom information for registered users, view all available recipes shared by the logged in user | edit own recipe functionality available to logged in users from their dashboard | delete own recipe functionality available to logged in users from their dashboard |
+
 ## Future Features
 I would like to expand the project in the future with following features:
 * Allow user delete his own account
@@ -262,6 +263,8 @@ I would like to expand the project in the future with following features:
 * Voting functionality for user's favourite recipe
 * Recipe search functionality  
 * Add page animation for better UX when viewing the site
+* Improve add recipe form so user can add ingredients and preparations step in new line for better readability
+
 # Technologies used
 * Language
     * HTML5 - for content and structure of the site
@@ -378,7 +381,7 @@ To Fork Project:
 * The solution to implementing Cloudinary API to allow users to upload images was inspired by my menthor Gareth McGirr and the Code Institute Slack Community, in particular by [Emma Hewson's MP3](https://github.com/emmahewson/mp3-swimmon)
 
 ## Content
-* Sample recipes poster on Savor Pages were sourced from [Simple Recipes](https://www.simplyrecipes.com/)
+* Sample recipes posted on Savor Pages were sourced from [Simple Recipes](https://www.simplyrecipes.com/)
 
 ## Images
 Images for a hero image as well as for a recipes were borrowed from [Pexel](https://www.pexels.com/)
