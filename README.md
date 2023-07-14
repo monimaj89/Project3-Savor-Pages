@@ -184,13 +184,13 @@ Fonts was imported from [Google Fonts](https://fonts.google.com/)
 ![Avocado](docs/avocado.png)
 ## Multi Page Element
 ### Navbar
-![Navbar](docs/navbar.png)
-
 A Navbar displays on every page, contains:
 * Logo
 * Home
 * Recipes
 * Account
+
+![Navbar](docs/navbar.png)
 
 ### Footer
 * Page name
@@ -203,6 +203,8 @@ A Navbar displays on every page, contains:
 * Button for recipes
 * Button to create an account
 * For already logged in user the button will redirect to user's profile page
+
+![Home](docs/home.png)
 
 ### Recipe page
 * Look through recipes added by other users
@@ -217,8 +219,8 @@ A Navbar displays on every page, contains:
 
 * Login page - with the link to register page for user without an account
 
-![Login](docs/login.png
-)
+![Login](docs/login.png)
+
 ## For Registered Users
 ### Profile page
 * All information needed to move around the page
