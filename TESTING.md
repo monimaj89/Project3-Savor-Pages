@@ -151,11 +151,12 @@ Responsive design testing has been carried out on different devices and screen s
 | 2. Add a recipe |'ADD RECIPE' button (on navbar, on recipe page, or on profile page) redirects to a form where user can add a recipe based on a category. |![Add a recipe category](docs/addrecipecat.png)  |
 | 3. Add a recipe without any blank fields | All fields are required to succesfully add a recipe. Not filling all the fields will show a warning note (not choosing the category will result with a console error) |![Recipe empty field](docs/fields.jpeg)|
 | 4. Add an image to recipe | A recipe image has been introduced by myself as an additional function for the better visual effect of the recipe. It isn't the perfect functionality, because depending of the image size and screen size, an image can be squished or stretched. Based on my observations the best image size to display properly is 600x400 |![Recipe Image](docs/recipesize.png)  |
-| 5. Edit your own recipe | User can edit his own recipe, including, changing the category, and any other fields except an image (future feature) The message about succesfully updated recipe will be display above the form | ![Edit message](docs/editmessage.png) ![Edit Recipe](docs/edit.png)  |
-| 6. Edit other user's recipe  | The defensive programming has been used to protect the recipes being edited by other users changing the number of recipe in the url address | ![Edit warning](docs/ownrecipe.png) |
-| 7. Delete a recipe | User can delete his own recipe and will be warned about the action before deleting |![Delete recipe](docs/delete.png) |
-| 8. Have access to tools user may need in order to add, update or delete the recipe | There are three button across the page to add a recipe, and below user's recipe there are buttons for edit and delete his own recipe | ![Add, edit, delete a recipe](docs/addeditdelete.png)  |
-| 9. Log out | Navbar provides a Log out button for user to leave his account, which redirects back to Login form and flash a message for user being logged out | ![Log out](docs/logout.png)|
+| 5. Display a recipe with all filled fields | After adding, a recipe displays all fields including a category and a creator |![Filled recipe](docs/fillrecipe.png)|
+| 6. Edit your own recipe | User can edit his own recipe, including, changing the category, and any other fields except an image (future feature) The message about succesfully updated recipe will be display above the form | ![Edit message](docs/editmessage.png) ![Edit Recipe](docs/edit.png)  |
+| 7. Edit other user's recipe  | The defensive programming has been used to protect the recipes being edited by other users changing the number of recipe in the url address | ![Edit warning](docs/ownrecipe.png) |
+| 8. Delete a recipe | User can delete his own recipe and will be warned about the action before deleting |![Delete recipe](docs/delete.png) |
+| 9. Have access to tools user may need in order to add, update or delete the recipe | There are three button across the page to add a recipe, and below user's recipe there are buttons for edit and delete his own recipe | ![Add, edit, delete a recipe](docs/addeditdelete.png)  |
+| 10. Log out | Navbar provides a Log out button for user to leave his account, which redirects back to Login form and flash a message for user being logged out | ![Log out](docs/logout.png)|
 
 ---- 
 
